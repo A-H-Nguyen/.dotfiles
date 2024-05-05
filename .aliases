@@ -1,0 +1,4 @@
+# The best ls aliases you'll ever see
+alias ll='ls -lah'
+alias l='ls -A'
+
