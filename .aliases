@@ -1,4 +1,11 @@
 # The best ls aliases you'll ever see
 alias ll='ls -lah'
 alias l='ls -A'
+
+# These aren't ls aliases. Still awesome tho
 alias vim='nvim'
+
+alias t='tmux new-session -A -s'
+alias ta='tmux attach-session -t'
+alias tk='tmux kill-session -t'
+alias tls='tmux ls'
