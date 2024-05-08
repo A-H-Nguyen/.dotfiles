@@ -1,0 +1,12 @@
+#!/bin/sh
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+
+echo -e "Fast forward repo on branch $current_branch\n"
+
+git stash
+
+git pull --ff-only origin "$current_branch"
+git submodule update --init --recursive
+
+git stash apply

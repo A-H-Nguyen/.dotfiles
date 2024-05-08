@@ -16,3 +16,4 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+export PATH=$PATH:$HOME/.dotfiles/.gitscripts
