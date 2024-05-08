@@ -1,6 +1,6 @@
 # The best ls aliases you'll ever see
-alias ll='ls -lah'
-alias l='ls -A'
+alias ll='ls -lahF'
+alias l='ls -AF'
 
 # These aren't ls aliases. Still awesome tho
 alias vim='nvim'
