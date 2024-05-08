@@ -4,6 +4,3 @@
 [submodule ".dockerfiles"]
 	path = .dockerfiles
 	url = git@github.com:A-H-Nguyen/.dockerfiles.git
-[submodule ".tmux/plugins/tpm"]
-	path = .tmux/plugins/tpm
-	url = https://github.com/tmux-plugins/tpm
