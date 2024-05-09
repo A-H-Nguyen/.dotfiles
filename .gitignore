@@ -1,5 +1,5 @@
 # Don't keep track of changes in .tmux bc that is tpm's job
 .tmux/
 
-# ignore the p10k repo
-powerlevel10k/
+# ignore the .zsh-conf directory bc it only contains non-submod git repos
+.zsh-conf/

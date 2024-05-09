@@ -6,7 +6,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # Activate the GLORIOUS powerlevel10k
-source $HOME/.dotfiles/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/.dotfiles/.zsh-conf/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/.dotfiles/.zsh-conf/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -16,4 +17,31 @@ if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
 
+# Need these two lines for tab completion highlighting
+zstyle ':completion:*' menu select
+autoload -U compinit; compinit
+
 export PATH=$PATH:$HOME/.dotfiles/.gitscripts
+
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⡠⠔⠒⠒⠒⢤⡀⠀⠀⠀⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢀⣾⣷⠀⠛⠀⠀⠀⠙⢆⠀⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢀⣠⣶⣿⣿⠿⠖⠒⠤⣄⠀⠀ ⠈⡆⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠙⠋⠉⠁⠀⠀⠀⠀⠀⠀⢇⠀⠀⠀⡇⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢸⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  "
+echo -e "   \e[31m⣿⣹⠀⣿⣉⢠⠛⡄⢰⠉⠂⠀⣿⣉⠀⠀⠀⠀⠀\e[37m⡌⠀⠀⠸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  "
+echo -e "   \e[31m⠛⠁⠀⠛⠒⠘⠉⠃⠈⠒⠃⠀⠛⠒⠀⠀⠀\e[37m⢰⠁⠀⠀⠀⠀⠑⢤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  "
+echo -e "  ⠀⠀\e[31m⡄⢠⡄⢠⠀⡰⣦⠀⣔⠢⠀⠀⠀⠀⠀\e[37m⡠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠙⠒⠒⠤⢄⣀⠤⠔⠒⡄ "
+echo -e "  ⠀⠀\e[31m⠳⠏⠳⠋⠀⠟⠺⠀⠬⠽⠀⠀⠀⠀\e[37m⢰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠉"
+echo -e "  ⠀\e[31m⣄⢠⡄⣠⠤⢠⡀⣠⢠⠤⠄⣠⢤⠀\e[37m⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀ "
+echo -e "  ⠀\e[31m⡏⢿⡇⣿⣒⠈⢧⠇⢸⣒⡂⣿⢳⠀\e[37m⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠊⠀⠀ "
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀ "
+echo -e "  ⠀⠀⠀⠀⠀\e[31m⣼⣳⠀⡟⣼⠀⠀⠀⠀⠀⠀\e[37m⠈⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⠀⠀⠀ "
+echo -e "  ⠀⠀⠀⠀⠀\e[31m⠃⠘⠀⠃⠘⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠈⢆⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⠀⠀  "
+echo -e "  \e[31m⡖⢲⠀⣶⣲ ⢲⠒⠀⣶ ⡖⢲⠀⡶⡄⡆⠀⠀⠀\e[37m⣿⠁⠀⠈⠑⠢⣄⠀⠀⠀⢠⠎⠀⠀⠀⠀⠀⠀   "
+echo -e "  \e[31m⠳⠼⠀⠿⠁ ⠸⠀⠀⠿ ⠣⠞⠀⠇⠹⠇⠀⠀\e[37m⢸⣿⠀⠀⠀⠀⠀⠀⠙⣢⡴⠁⠀" 
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⣠⣶⣶⣶⣾⣿⡿⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀" 
+echo -e      "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠈⠛⠛⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀" 
+echo -e     "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⣀⣤⣴⣶⣿⣿⠀⠀⠀⠀⠀" 
+echo -e     "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠉⠻⠛⠛⠻⠀⠀⠀  " 
+echo -e "\n\e[0m"
+
