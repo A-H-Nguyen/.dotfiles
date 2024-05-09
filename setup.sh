@@ -1,6 +1,26 @@
 #!/bin/bash
 
-echo -e "Hey\n"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⡠⠔⠒⠒⠒⢤⡀⠀⠀⠀⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢀⣾⣷⠀⠛⠀⠀⠀⠙⢆⠀⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢀⣠⣶⣿⣿⠿⠖⠒⠤⣄⠀⠀ ⠈⡆⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠙⠋⠉⠁⠀⠀⠀⠀⠀⠀⢇⠀⠀⠀⡇⠀"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢸⠀⠀⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀         \e[34m\e[2m  █████  ██████   ██████ ██   ██\e[22m"
+echo -e "   \e[31m⣿⣹⠀⣿⣉⢠⠛⡄⢰⠉⠂⠀⣿⣉⠀⠀⠀⠀⠀\e[37m⡌⠀⠀⠸⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀         \e[34m\e[2m ██   ██ ██   ██ ██      ██   ██\e[22m"
+echo -e "   \e[31m⠛⠁⠀⠛⠒⠘⠉⠃⠈⠒⠃⠀⠛⠒⠀⠀⠀\e[37m⢰⠁⠀⠀⠀⠀⠑⢤⣀⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀  ⠀         \e[34m\e[2m ███████ ██████  ██      ███████\e[22m"
+echo -e "  ⠀⠀\e[31m⡄⢠⡄⢠⠀⡰⣦⠀⣔⠢⠀⠀⠀⠀⠀\e[37m⡠⠃⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠙⠒⠒⠤⢄⣀⠤⠔⠒⡄           \e[34m\e[2m ██   ██ ██   ██ ██      ██   ██\e[22m"
+echo -e "  ⠀⠀\e[31m⠳⠏⠳⠋⠀⠟⠺⠀⠬⠽⠀⠀⠀⠀\e[37m⢰⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠉          \e[34m\e[2m ██   ██ ██   ██  ██████ ██   ██\e[22m"
+echo -e "  ⠀\e[31m⣄⢠⡄⣠⠤⢠⡀⣠⢠⠤⠄⣠⢤⠀\e[37m⢸⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡼⠀"
+echo -e "  ⠀\e[31m⡏⢿⡇⣿⣒⠈⢧⠇⢸⣒⡂⣿⢳⠀\e[37m⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡤⠊⠀⠀           \e[34m\e[2m    ██████  ████████ ██     ██\e[22m"
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡸⠀⠀⠀⠀           \e[34m\e[2m    ██   ██    ██    ██     ██\e[22m"
+echo -e "  ⠀⠀⠀⠀⠀\e[31m⣼⣳⠀⡟⣼⠀⠀⠀⠀⠀⠀\e[37m⠈⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠇⠀⠀⠀⠀           \e[34m\e[2m    ██████     ██    ██  █  ██\e[22m"
+echo -e "  ⠀⠀⠀⠀⠀\e[31m⠃⠘⠀⠃⠘⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠈⢆⣀⣀⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠎⠀⠀⠀⠀⠀            \e[34m\e[2m    ██   ██    ██    ██ ███ ██\e[22m"
+echo -e "  \e[31m⡖⢲⠀⣶⣲ ⢲⠒⠀⣶ ⡖⢲⠀⡶⡄⡆⠀⠀⠀\e[37m⣿⠁⠀⠈⠑⠢⣄⠀⠀⠀⢠⠎⠀⠀⠀⠀⠀⠀             \e[34m\e[2m    ██████     ██     ███ ███ \e[22m" 
+echo -e "  \e[31m⠳⠼⠀⠿⠁ ⠸⠀⠀⠿ ⠣⠞⠀⠇⠹⠇⠀⠀\e[37m⢸⣿⠀⠀⠀⠀⠀⠀⠙⣢⡴⠁⠀" 
+echo -e       "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⣠⣶⣶⣶⣾⣿⡿⠀⠀⠀⠀⠀⠀⠀⣿⠇⠀⠀" 
+echo -e      "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠈⠛⠛⠿⠛⠉⠀⠀⠀⠀⠀⠀⠀⢀⣿⠀⠀⠀⠀" 
+echo -e     "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⣀⣤⣴⣶⣿⣿⠀⠀⠀⠀⠀" 
+echo -e     "  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⠉⠻⠛⠛⠻⠀⠀⠀  " 
+echo -e "\n\e[0m.............................................\n"
 
 ### Store .dotfiles path as a variable 
 df=$HOME/.dotfiles
@@ -26,41 +46,76 @@ declare -A files=(
 )
 
 # Loop through the array and perform git clone for each repository
-echo -e "Clone some GLORIOUS repos\n"
+echo -e "\e[35m\e[1mClone some GLORIOUS repos\e[0m\n"
 for repo_url in "${!repos[@]}"; do
     target_dir="${repos[$repo_url]}"
     # Check if the target directory already exists
     if [ -d "$target_dir" ]; then
-        echo "Target directory '$target_dir' already exists for repository '$repo_url'. Skipping git clone..."
+        echo -e "\e[33mTarget directory '$target_dir' already exists for repository '$repo_url'. Skipping git clone..."
     else
         # Run git clone if the directory doesn't exist
+		echo -e "\e[35mgit clone $repo_url $target_dir"
         git clone "$repo_url" "$target_dir"
         # Check if clone was successful
         if [ $? -eq 0 ]; then
-            echo "Repository cloned successfully: $repo_url"
+            echo -e "\t\e[32mRepository cloned successfully: $repo_url"
         else
-            echo "Failed to clone repository: $repo_url"
+            echo -e "\t\e[31mFailed to clone repository: $repo_url"
         fi
     fi
 done
 
-echo -e "\nLinkaging...\n" 
+echo -e "\n\e[0m\e[36m\e[1mLinkaging...\e[0m\n" 
 
 # Loop through the array and create symbolic links
 for source in "${!files[@]}"; do
     target="${files[$source]}"
     # Check if the target file or link already exists
     if [ -e "$target" ]; then
-        echo "Deleting existing file/link: $target ..."
+        echo -e "\e[33mDeleting existing file/link: $target ..."
         rm "$target"
     fi
     # Create symbolic link
+    echo -e "\e[36mln -s $source $target"
     ln -s "$source" "$target"
     if [ $? -eq 0 ]; then
-        echo "Created symbolic link: $target -> $source"
+        echo -e "\t\e[32mCreated symbolic link: $target -> $source"
     else
-        echo "Failed to create symbolic link for: $target"
+        echo -e "\t\e[31mFailed to create symbolic link for: $target"
     fi
 done
 
-echo -e "\nWe are SO BACK\n" 
+echo -e "\n\e[0m...................................................\n"
+echo -e "\e[31m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣦⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[33m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⠿⠛⠛⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠻⢿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[35m⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⣶⡿⠛⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠙⠿⣷⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[36m⠀⠀⠀⠀⠀⠀⠀⢀⣼⡿⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣷⣄⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[34m⠀⠀⠀⠀⠀⠀⢀⣾⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣶⡆⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⣶⡀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⣆⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[32m⠀⠀⠀⠀⠀⠀⣾⣟⣀⠀⠀⠀⠀⣀⣀⠀⠀⠀⢸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⡇⠀⠀⢀⣄⠀⠀⠀⠀⣀⣹⣿⡆⠀⠀⠀⠀⠀ "
+echo -e "\e[31m⠀⠀⢀⣤⣾⡿⣿⣟⣿⣷⠀⠀⠀⣿⣿⣤⣤⣤⣼⣿⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣤⣿⣧⣤⣤⣼⣿⠀⠀⠀⢸⣿⣻⣿⠿⣷⣦⣄⠀⠀ "
+echo -e "\e[33m⢀⣴⡿⠋⠁⠀⠙⢻⣿⡇⠀⠀⠀⣿⡟⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⠉⢹⣿⠀⠀⠀⠈⣿⣿⠋⠀⠀⠙⢿⣷⣄ "
+echo -e "\e[35m⣿⣿⣶⣦⠀⠀⢠⣿⣿⠅⠀⠀⠀⣿⡇⠀⣠⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⣤⠀⠘⣿⡇⠀⠀⠀⣿⣿⣆⠀⠀⢰⣶⣿⣿ "
+echo -e "\e[36m⠀⠀⣿⡇⢀⣴⣿⢿⣿⡄⠀⠀⠀⣿⡇⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⣿⣷⠀⠀⠀⢻⣿⢿⣧⡀⠘⣿⠃⠀ \e[31m\e[5m          ██     ██ ███████      █████  ██████  ███████\e[25m"
+echo -e "\e[34m⠀⠀⣿⣷⣿⣿⠁⣸⣿⠇⠀⠀⠀⣿⡇⠀⣿⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢸⣿⠀⠀⣿⡇⡄⠀⠀⢸⣿⠈⣿⣿⣶⣿⠇⠀ \e[33m\e[5m          ██     ██ ██          ██   ██ ██   ██ ██     \e[25m"
+echo -e "\e[32m⠀⠀⠘⠉⢸⣿⠀⣿⡟⢰⠀⠀⠀⣿⡇⠀⠈⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠀⠀⣿⡇⢡⠀⠀⠸⣿⡄⢸⣿⠈⠉⠀⠀ \e[35m\e[5m          ██  █  ██ █████       ███████ ██████  █████  \e[25m"
+echo -e "\e[31m⠀⠀⠀⠀⣼⡟⠀⣿⡇⠸⠀⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⢀⣤⣄⣀⣤⡄⠀⠀⠀⠀⠀⠀⠀⢠⣿⡇⠀⡄⠀⠘⣿⡇⢸⣿⡀⠀⠀⠀ \e[36m\e[5m          ██ ███ ██ ██          ██   ██ ██   ██ ██     \e[25m"
+echo -e "\e[33m⠀⠀⠀⠀⣿⡇⢠⣿⡇⠀⣆⠀⠀⣿⣇⠀⠀⠀⠀⠀⠀⠀⠀⠙⠛⠛⠛⠁⠀⠀⠀⠀⠀⠀⠀⢸⣿⡇⠀⢡⡀⠀⣿⣇⠈⣿⡇⠀⠀⠀ \e[34m\e[5m           ███ ███  ███████     ██   ██ ██   ██ ███████\e[25m"
+echo -e "\e[35m⠀⠀⠀⢸⣿⠃⢸⣿⣶⡿⣿⣆⠀⣿⣿⣤⣤⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣀⣤⣤⣾⣿⠀⣠⣿⣿⣷⣿⣿⠀⣿⣧⠀⠀⠀ "
+echo -e "\e[36m⠀⠀⠀⣼⣿⠀⠘⠛⠉⠀⢿⣿⣷⣿⣿⣿⠉⠛⠛⠛⠻⣿⣿⠿⠿⠿⠿⣿⣿⡿⠛⠛⠛⠛⢹⣿⣿⣴⣿⡿⠃⠈⠙⠛⠀⢸⣿⠀⠀⠀ "
+echo -e "\e[34m⠀⠀⢠⣿⡇⠀⠀⠀⠀⠀⢀⣨⣿⠟⣿⣿⣶⣦⣤⣄⣀⡈⠻⣷⣄⢠⣾⡿⠋⣀⣀⣠⣤⣶⣾⣿⡟⣿⣧⡀⠀⠀⠀⠀⠀⠘⣿⡇⠀⠀ \e[32m\e[5m       ███████  ██████      ██████   █████   ██████ ██   ██\e[25m"
+echo -e "\e[32m⠀⠀⢸⣿⠁⠀⢀⡀⡠⠒⣱⣿⠏⠀⣿⡇⠈⠉⠙⠛⠻⠿⠿⢿⣿⣿⣿⡿⠿⠿⠛⠛⠉⠉⠈⣿⡇⠘⣿⣯⠒⢄⣀⣀⠀⠀⢻⣷⠀⠀ \e[31m\e[5m       ██      ██    ██     ██   ██ ██   ██ ██      ██  ██ \e[25m"
+echo -e "\e[31m⠀⢀⣿⣇⣤⣶⣿⡿⠀⣠⣿⠏⠀⢸⣿⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣧⠀⠘⣿⣧⠀⢸⣿⣷⣤⣜⣿⡇⠀ \e[33m\e[5m       ███████ ██    ██     ██████  ███████ ██      █████  \e[25m"
+echo -e "\e[33m⠀⠈⠛⠛⠋⢉⣿⠇⢠⣿⠟⠀⠀⣸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⠀⠀⠘⣿⣧⠀⣿⡯⠉⠛⠋⠁⠀ \e[35m\e[5m            ██ ██    ██     ██   ██ ██   ██ ██      ██  ██ \e[25m"
+echo -e "\e[35m⠀⠀⠀⠀⠀⢸⣿⣠⣿⡟⠒⠤⢀⣿⡿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⠼⣿⣄⠤⠔⠚⣿⣆⣹⣿⠀⠀⠀⠀⠀ \e[36m\e[5m       ███████  ██████      ██████  ██   ██  ██████ ██   ██\e[25m"
+echo -e "\e[36m⠀⠀⠀⠀⠀⠙⠛⠟⣿⣿⣶⣤⣤⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠴⠊⠁⠀⣿⣧⣤⣴⣾⣿⠟⠛⠛⠁⠀⠀⠀⠀ "
+echo -e "\e[34m⠀⠀⠀⠀⠀⠀⠀⠀⣿⣇⠈⢩⣿⣿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⠔⠁⠀⠀⠀⠀⣿⣿⣏⠉⢈⣿⡇⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[32m⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⠿⠿⣻⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠠⠧⣀⣀⡀⣀⣀⣀⣹⣿⠻⠿⠿⠛⠁⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[31m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⡟⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠉⠉⠉⠀⢸⣿⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[33m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣿⣏⠐⠠⢄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡠⠤⠒⢉⣿⡇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[35m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠿⣷⣦⣄⣀⡈⠉⠁⠐⠒⠒⠒⠒⠒⠒⠒⠀⠉⢁⣀⣀⣤⣶⡿⢿⣷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[36m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠹⣿⡟⠿⠿⣿⣿⣷⣶⣶⣶⣶⣶⣿⣿⡿⠿⠟⣿⣟⡁⠀⠈⠻⣷⣄⣀⣀⣀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[34m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢿⣧⠀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⢰⣿⠿⢿⣷⣶⣴⡟⠛⠛⠛⠿⣿⣦⠀⠀⠀⠀ "
+echo -e "\e[32m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣸⣿⡀⠀⣿⡇⠀⠀⠀⠀⠀⠀⠀⣿⡇⠀⣾⣿⠁⠀⠀⢸⣿⠃⣼⣿⣿⠿⠿⠋⠀⠀⠀⠀ "
+echo -e "\e[31m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣶⡿⠻⣿⣦⣿⡇⠀⠀⠀⠀⠀⠀⠀⣿⣧⣾⡟⠻⣷⣄⠀⢸⣿⣠⣿⠏⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\e[33m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠺⠿⠿⠿⠿⠿⠿⠇⠀⠀⠀⠀⠀⠀⠀⠿⠿⠿⠿⠿⠿⠿⠀⠈⠻⠿⠏⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
+echo -e "\n\e[0m...................................................\n"
