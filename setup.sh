@@ -56,7 +56,7 @@ for source in "${!files[@]}"; do
     # Check if the target file or link already exists
     if [ -e "$target" ]; then
         echo -e "\e[33mDeleting existing file/link: $target ...\e[0m"
-        rm "$target"
+        rm -r "$target"
     fi
     # Create symbolic link
     ln -s "$source" "$target"
