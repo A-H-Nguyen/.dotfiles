@@ -41,6 +41,7 @@ declare -A files=(
     ["$df/.aliases"]=".aliases"
     ["$df/.bashrc"]=".bashrc"
     ["$df/.tmux"]=".tmux"
+    ["$df/.tmux.conf"]=".tmux.conf"
     ["$df/.config"]=".config"
     ["$df/.dockerfiles"]=".dockerfiles"
     ["$df/.zshrc"]=".zshrc"
