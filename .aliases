@@ -1,10 +1,21 @@
+# enable color support of ls and grep
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto'
+    
+	alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
 # The best ls aliases you'll ever see
 alias ll='ls -lahF'
 alias l='ls -AF'
 
-# These aren't ls aliases. Still awesome tho
+# I'm too ADVANCED for old school vim
 alias vim='nvim'
 
+# Magnificent tmux aliases
 alias t='tmux new-session -A -s'
 alias ta='tmux attach-session -t'
 alias tk='tmux kill-session -t'
