@@ -3,29 +3,18 @@
 ### Store .dotfiles path as a variable 
 df=$HOME/.dotfiles
 
-### I got chatGPT to write this because I can't be bothered to learn to BASH
+### I got chatGPT to write the actual code because I can't be bothered to learn to BASH
+### Maybe I should've done this in Python
 
-# GIT some goodies
+### GIT some goodies
 declare -A repos=(
 	["https://github.com/zsh-users/zsh-syntax-highlighting.git"]="$df/.zsh-conf/zsh-syntax-highlighting"
     ["https://github.com/romkatv/powerlevel10k.git"]="$df/.zsh-conf/powerlevel10k"
     ["https://github.com/tmux-plugins/tpm"]="$df/.tmux/plugins/tpm"
 )
 
-# Define an associative array with source and target filenames/paths
-declare -A files=(
-    ["$df/.aliases"]=".aliases"
-    ["$df/.bashrc"]=".bashrc"
-    ["$df/.tmux"]=".tmux"
-    ["$df/.tmux.conf"]=".tmux.conf"
-    ["$df/.config"]=".config"
-    ["$df/.dockerfiles"]=".dockerfiles"
-    ["$df/.zshrc"]=".zshrc"
-    ["$df/.p10k.zsh"]=".p10k.zsh"
-)
-
-# Loop through the array and perform git clone for each repository
 echo -e "\e[36m\e[1mClone some GLORIOUS repos \e[0m\n"
+
 for repo_url in "${!repos[@]}"; do
     target_dir="${repos[$repo_url]}"
 	echo -e "\e[35mAttempt to clone repo $repo_url into $target_dir \e[0m"
@@ -46,9 +35,20 @@ for repo_url in "${!repos[@]}"; do
     fi
 done
 
+
+### Create symbolic links
+declare -A files=(
+    ["$df/.aliases"]=".aliases"
+    ["$df/.bashrc"]=".bashrc"
+    ["$df/.tmux"]=".tmux"
+    ["$df/.config"]=".config"
+    ["$df/.dockerfiles"]=".dockerfiles"
+    ["$df/.zshrc"]=".zshrc"
+    ["$df/.p10k.zsh"]=".p10k.zsh" # TODO: move this to .zsh-conf 
+)
+
 echo -e "\n\e[0m\e[36m\e[1mLinkaging...\e[0m\n" 
 
-# Loop through the array and create symbolic links
 for source in "${!files[@]}"; do
     target="${files[$source]}"
 	echo -e "\e[35mAttempting to link $source to $target \e[0m"
@@ -67,6 +67,7 @@ for source in "${!files[@]}"; do
     fi
 done
 
+### Welcomed by Gura. I couldn't find Fauna ASCII art
 echo -e "\n\e[5m...................................................\e[25m\n"
 echo -e "\e[31m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣀⣠⣤⣴⣶⣶⣶⣶⣶⣶⣶⣶⣶⣶⣦⣤⣤⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
 echo -e "\e[33m⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⣠⣴⣾⠿⠛⠛⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠙⠛⠻⢿⣶⣤⣀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ "
