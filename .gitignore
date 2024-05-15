@@ -1,5 +1,5 @@
-# Don't keep track of changes in .tmux bc that is tpm's job
-.tmux/
+# Don't keep track of changes in tmux plugins folder bc that is tpm's job
+.tmux/plugins
 
 # ignore the .zsh-conf directory bc it only contains non-submod git repos
 .zsh-conf/
