@@ -14,7 +14,7 @@ source $HOME/.dotfiles/.zsh-conf/zsh-syntax-highlighting/zsh-syntax-highlighting
 
 # Load alias definitions.
 if [ -f ~/.aliases ]; then
-    . ~/.aliases
+    source ~/.aliases
 fi
 
 # Need these two lines for tab completion highlighting
@@ -24,6 +24,11 @@ autoload -U compinit; compinit
 # Tell p10k to shut up
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
+# Make sure the history file is defined
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt appendhistory
 
 # Keybinds
 #      BackSpace  "${terminfo[kbs]}"
@@ -46,13 +51,10 @@ zle -N down-line-or-beginning-search
 bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
 bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 
-# This is TERMINAL EMULATOR SPECIFIC -- works on xterm based emulators
+# This is TERMINAL EMULATOR SPECIFIC -- should work on xterm based emulators
 # Fixes ctrl + left/right
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
-
-# colored GCC warnings and errors
-export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # add custom git commands to PATH
 export PATH=$PATH:$HOME/.dotfiles/.gitscripts
