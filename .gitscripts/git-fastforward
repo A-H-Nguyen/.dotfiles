@@ -1,14 +1,21 @@
 #!/bin/sh
 
 current_branch=$(git rev-parse --abbrev-ref HEAD)
+gitmodules_path="$(git rev-parse --show-toplevel)/.gitmodules"
 
 echo -e "Fast forward repo on branch $current_branch\n"
 
-git submodule foreach "git stash"
+if [ -f gitmodules_path ]; then
+    git submodule foreach "git stash"
+    git submodule foreach "git pull --ff-only"
+fi
+
 git stash
 
 git pull --ff-only origin "$current_branch"
-git submodule update --init --recursive
 
-git submodule foreach "git stash apply"
 git stash apply
+
+if [ -f gitmodules_path ]; then
+    git submodule foreach "git stash apply"
+fi
