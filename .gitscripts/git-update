@@ -5,7 +5,7 @@ gitmodules_path="$(git rev-parse --show-toplevel)/.gitmodules"
 
 echo -e "Update repo on branch $current_branch\n"
 
-if [ -f gitmodules_path ]; then
+if [ -f $gitmodules_path ]; then
     echo "Updating submodules..."
     git submodule foreach "git push"
 fi
