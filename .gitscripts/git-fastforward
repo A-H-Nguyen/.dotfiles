@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 current_branch=$(git rev-parse --abbrev-ref HEAD)
 gitmodules_path="$(git rev-parse --show-toplevel)/.gitmodules"

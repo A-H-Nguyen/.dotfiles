@@ -1,0 +1,15 @@
+#!/bin/bash
+
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+gitmodules_path="$(git rev-parse --show-toplevel)/.gitmodules"
+
+echo -e "Update repo on branch $current_branch\n"
+
+if [ -f gitmodules_path ]; then
+    echo "Updating submodules..."
+    git submodule foreach "git push"
+fi
+
+git add .
+git commit 
+git push
