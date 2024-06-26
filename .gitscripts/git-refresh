@@ -17,7 +17,7 @@ then
     # Checkout remote branch from where you want to update. 
     git checkout "$remoteBranch"
     # Pull the branch to update it
-    git pull --rebase origin "$remoteBranch"
+    git pull --rebase
     # Checkout current branch which you were on before.
     git checkout "$currentBranch"
     # Rebase the changes

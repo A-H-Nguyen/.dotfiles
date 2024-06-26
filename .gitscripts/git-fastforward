@@ -12,7 +12,7 @@ fi
 
 git stash
 
-git pull --ff-only origin "$current_branch"
+git pull --ff-only 
 
 git stash apply
 
