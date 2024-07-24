@@ -1,18 +1,31 @@
 # My dotfiles! 
 My dotfiles.
 
-## Required Applications
-More accurately, my usual applications:
+I use Arch, btw.
+
+## My applications
+They're my favorite :)
+
+Just declare these during the Arch install process.
+
+I still don't actually know how to use fzf but I saw guys on YouTube use it, and it looks sick.
+
 ```
 sudo pacman -Syu \
-	tmux \
-	neovim \
 	git \
+    fzf \
+    locate \
+	neovim \
 	ripgrep \
+	tmux \
 	unzip \
 	zsh
 ```
 
+To update locate's database use this:
+```
+sudo updatedb
+```
 
 ## For zsh keybinds
 If any keybindind doesn't work probably, it might be because of the terminal emulator. 
