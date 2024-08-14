@@ -9,43 +9,43 @@ df=$HOME/.dotfiles
 ### GIT some goodies
 declare -A repos=(
 	["https://github.com/zsh-users/zsh-syntax-highlighting.git"]="$df/.zsh-conf/zsh-syntax-highlighting"
-    ["https://github.com/romkatv/powerlevel10k.git"]="$df/.zsh-conf/powerlevel10k"
-    ["https://github.com/tmux-plugins/tpm"]="$df/.tmux/plugins/tpm"
+	["https://github.com/romkatv/powerlevel10k.git"]="$df/.zsh-conf/powerlevel10k"
+	["https://github.com/tmux-plugins/tpm"]="$df/.tmux/plugins/tpm"
 )
 
 echo -e "\e[36m\e[1mClone some GLORIOUS repos \e[0m\n"
 
 for repo_url in "${!repos[@]}"; do
-    target_dir="${repos[$repo_url]}"
+	target_dir="${repos[$repo_url]}"
 	echo -e "\e[35mAttempt to clone repo $repo_url into $target_dir \e[0m"
 
-    # Check if the target directory already exists
-    if [ -d "$target_dir" ]; then
-        echo -e "\e[33mTarget directory '$target_dir' already exists for repository '$repo_url'."
+	# Check if the target directory already exists
+	if [ -d "$target_dir" ]; then
+		echo -e "\e[33mTarget directory '$target_dir' already exists for repository '$repo_url'."
 		echo -e "Skipping git clone...\e[0m\n"
-    else
-        # Run git clone if the directory doesn't exist
-        git clone "$repo_url" "$target_dir"
-        # Check if clone was successful
-        if [ $? -eq 0 ]; then
-            echo -e "\t\e[32mRepository cloned successfully: $repo_url \e[0m\n"
-        else
-            echo -e "\t\e[31mFailed to clone repository: $repo_url \e[0m\n"
-        fi
-    fi
+	else
+		# Run git clone if the directory doesn't exist
+		git clone "$repo_url" "$target_dir"
+		# Check if clone was successful
+		if [ $? -eq 0 ]; then
+			echo -e "\t\e[32mRepository cloned successfully: $repo_url \e[0m\n"
+		else
+			echo -e "\t\e[31mFailed to clone repository: $repo_url \e[0m\n"
+		fi
+	fi
 done
 
 
 ### Create symbolic links
 declare -A files=(
-    ["$df/.aliases"]=".aliases"
-    ["$df/.bashrc"]=".bashrc"
-    ["$df/.tmux"]=".tmux"
-    ["$df/.tmux.conf"]=".tmux.conf"
-    ["$df/.config"]=".config"
-    ["$df/.dockerfiles"]=".dockerfiles"
-    ["$df/.zshrc"]=".zshrc"
-    ["$df/.p10k.zsh"]=".p10k.zsh" # TODO: move this to .zsh-conf 
+	["$df/.aliases"]=".aliases"
+	["$df/.bashrc"]=".bashrc"
+	["$df/.tmux"]=".tmux"
+	["$df/.tmux.conf"]=".tmux.conf"
+	["$df/.config/nvim"]=".config/nvim"
+	["$df/.dockerfiles"]=".dockerfiles"
+	["$df/.zshrc"]=".zshrc"
+	["$df/.p10k.zsh"]=".p10k.zsh"
 )
 
 echo -e "\n\e[0m\e[36m\e[1mLinkaging...\e[0m\n" 
