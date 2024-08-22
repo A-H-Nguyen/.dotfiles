@@ -16,6 +16,9 @@ source $HOME/.dotfiles/.zsh-conf/zsh-syntax-highlighting/zsh-syntax-highlighting
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 ### Keybindings
+# Currently all keycodes are TERMINAL EMULATOR SPECIFIC 
+# should work on xterm based emulators
+
 # Needed for tab completion 
 autoload -U compinit; compinit
 
@@ -24,14 +27,29 @@ zstyle ':completion:*' menu select
 
 # Bind Shift+Tab to go backward in the completion menu
 # also make sure that ctrl + left/right jumps bw words
-# Currently TERMINAL EMULATOR SPECIFIC -- should work on xterm based emulators
-bindkey '^[[Z' reverse-menu-complete
+bindkey "^[[Z" reverse-menu-complete
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
+# Make sure Home/End go to the beginning/end of the line
+bindkey  "^[[H"   beginning-of-line
+bindkey  "^[[F"   end-of-line
+
+# Delete sometimes also doesn't do what I want it to do
+bindkey  "^[[3~"  delete-char
+
+# Filter searching through history w/ UP and DOWN
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
+
 # More Keybinds - these should be TERMINAL EMULATOR AGNOSTIC
+#               - THEY ALSO DON'T ALWAYS WORK 
 #      BackSpace  "${terminfo[kbs]}"
-#      Home       "${terminfo[khome]}"
+#      Home       "${terminfo[khome]}" 
 #      End        "${terminfo[kend]}"
 #      Insert     "${terminfo[kich1]}"
 #      Delete     "${terminfo[kdch1]}"
@@ -41,14 +59,6 @@ bindkey "^[[1;5C" forward-word
 #      Right      "${terminfo[kcuf1]}"
 #      PageUp     "${terminfo[kpp]}"
 #      PageDown   "${terminfo[knp]}"
-
-# Filter searching through history w/ UP and DOWN
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "${terminfo[kcuu1]}" up-line-or-beginning-search
-bindkey "${terminfo[kcud1]}" down-line-or-beginning-search
 
 ### Load alias definitions.
 if [ -f ~/.aliases ]; then
