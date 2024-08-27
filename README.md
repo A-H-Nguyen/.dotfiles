@@ -48,7 +48,10 @@ However, I wasn't comfortable having tpm as a submod, so clone that into this re
 git clone https://github.com/tmux-plugins/tpm tmux/.tmux/plugins/tpm
 ```
 
-Once you have all the repos, just run `stow .`.
+Once you have all the repos, run this from your home dir (or wherever this repo is cloned):
+```
+stow -d .dotfiles -S my-scripts nvim tmux zsh
+```
 
 After running `stow`, make sure to open a tmux session and use the command `prefix + I` (capital i, as in **I**nstall) to fetch the tmux plugins.
 
