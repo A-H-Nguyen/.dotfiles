@@ -17,9 +17,11 @@ They're my favorite :)
 I'm pretty sure these are all the programs that I need that are available via pacman:
 ```
 sudo pacman -Syu \
+	base-devel \
     git \
     fzf \
     locate \
+    luarocks \
     neovim \
     ripgrep \
     stow \
