@@ -45,7 +45,7 @@ git submodule update
 
 However, I wasn't comfortable having tpm as a submod, so clone that into this repo's folder manually:
 ```
-git clone https://github.com/tmux-plugins/tpm"]="$df/.tmux/plugins/tpm .tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm tmux/.tmux/plugins/tpm
 ```
 
 Once you have all the repos, just run `stow .`.
