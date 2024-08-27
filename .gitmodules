@@ -1,3 +1,9 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = git@github.com:A-H-Nguyen/nvim.git
+[submodule ".zsh-conf/zsh-syntax-highlighting"]
+	path = .zsh-conf/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting
+[submodule ".zsh-conf/powerlevel10k"]
+	path = .zsh-conf/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
