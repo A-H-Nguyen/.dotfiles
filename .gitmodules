@@ -4,3 +4,6 @@
 [submodule "zsh/.zsh-conf/powerlevel10k"]
 	path = zsh/.zsh-conf/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "nvim/.config/nvim"]
+	path = nvim/.config/nvim
+	url = https://github.com/A-H-Nguyen/nvim
