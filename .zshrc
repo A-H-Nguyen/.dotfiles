@@ -16,6 +16,7 @@ source $HOME/.dotfiles/.zsh-conf/zsh-syntax-highlighting/zsh-syntax-highlighting
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 ### Keybindings
+
 # Currently all keycodes are TERMINAL EMULATOR SPECIFIC 
 # should work on xterm based emulators
 
@@ -66,9 +67,6 @@ if [ -f ~/.aliases ]; then
 fi
 
 ### Environment Variables
-# colored GCC warnings and errors. I actually don't know what this does
-# It's a hold over from my old, old, old Ubuntu .bashrc
-# export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 # It'd be good to have a history file
 export HISTFILE=~/.zsh_history
@@ -79,7 +77,7 @@ setopt HIST_IGNORE_DUPS   # save only one command if 2 common are same and consi
 setopt EXTENDED_HISTORY   # add timestamp for each entry
 
 # add custom git commands to PATH
-export PATH=$PATH:$HOME/.dotfiles/.gitscripts
+export PATH=$PATH:$HOME/.my-scripts
 
 ### You're READY man!
 echo -e                  "   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\e[37m⡠⠔⠒⠒⠒⢤⡀⠀⠀⠀"

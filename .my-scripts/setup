@@ -37,36 +37,36 @@ done
 
 
 ### Create symbolic links
-declare -A files=(
-	["$df/.aliases"]=".aliases"
-	["$df/.bashrc"]=".bashrc"
-	["$df/.tmux"]=".tmux"
-	["$df/.tmux.conf"]=".tmux.conf"
-	["$df/.config/nvim"]=".config/nvim"
-	["$df/.dockerfiles"]=".dockerfiles"
-	["$df/.zshrc"]=".zshrc"
-	["$df/.p10k.zsh"]=".p10k.zsh"
-)
+# declare -A files=(
+# 	["$df/.aliases"]=".aliases"
+# 	["$df/.bashrc"]=".bashrc"
+# 	["$df/.tmux"]=".tmux"
+# 	["$df/.tmux.conf"]=".tmux.conf"
+# 	["$df/.config/nvim"]=".config/nvim"
+# 	["$df/.dockerfiles"]=".dockerfiles"
+# 	["$df/.zshrc"]=".zshrc"
+# 	["$df/.p10k.zsh"]=".p10k.zsh"
+# )
 
-echo -e "\n\e[0m\e[36m\e[1mLinkaging...\e[0m\n" 
+# echo -e "\n\e[0m\e[36m\e[1mLinkaging...\e[0m\n" 
 
-for source in "${!files[@]}"; do
-    target="${files[$source]}"
-	echo -e "\e[35mAttempting to link $source to $target \e[0m"
+# for source in "${!files[@]}"; do
+#     target="${files[$source]}"
+# 	echo -e "\e[35mAttempting to link $source to $target \e[0m"
 
-    # Check if the target file or link already exists
-    if [ -e "$target" ]; then
-        echo -e "\e[33mDeleting existing file/link: $target ...\e[0m"
-        rm -r "$target"
-    fi
-    # Create symbolic link
-    ln -s "$source" "$target"
-    if [ $? -eq 0 ]; then
-        echo -e "\t\e[32mCreated symbolic link: $target -> $source \e[0m\n"
-    else
-        echo -e "\t\e[31mFailed to create symbolic link for: $target \e[0m\n"
-    fi
-done
+#     # Check if the target file or link already exists
+#     if [ -e "$target" ]; then
+#         echo -e "\e[33mDeleting existing file/link: $target ...\e[0m"
+#         rm -r "$target"
+#     fi
+#     # Create symbolic link
+#     ln -s "$source" "$target"
+#     if [ $? -eq 0 ]; then
+#         echo -e "\t\e[32mCreated symbolic link: $target -> $source \e[0m\n"
+#     else
+#         echo -e "\t\e[31mFailed to create symbolic link for: $target \e[0m\n"
+#     fi
+# done
 
 ### Welcomed by Gura. I couldn't find Fauna ASCII art
 echo -e "\n\e[5m...................................................\e[25m\n"
