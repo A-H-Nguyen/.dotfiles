@@ -10,7 +10,8 @@ If somehow this repository contains a massive security risk for me please let me
 
 In order to use thiese dotfiles, you first download the needed applications, then create the submodules (if you want to also use my neovim config), and lastly initialize tmux plugins.
 
-### My Applications
+### Setup
+## My Applications
 They're my favorite :)
 
 I'm pretty sure these are all the programs that I need that are available via pacman:
@@ -21,6 +22,7 @@ sudo pacman -Syu \
     locate \
     neovim \
     ripgrep \
+    stow \
     tmux \
     unzip \
     zsh
@@ -34,22 +36,22 @@ To update locate's database use this:
 sudo updatedb
 ```
 
-### Submodules
-If you know what you're doing this is self explanatory.
-
-If you do not know what you're doing (me) just run these two commands:
+## External Repos
+I have a few submodules so make sure to run:
 ```
 git submodule init
 git submodule update
 ```
-Not sure if the update is necessary but it makes me feel safe.
 
-### The Setup Script
-Make sure to run `setup.sh` **in the home directory**!
-It's written in a really crappy way, where it tries to clone and link everything into your current working dir.
-I really should just be using `stow` but I've been too lazy to bother learning this very simple program...
+However, I wasn't comfortable having tpm as a submod, so clone that into this repo's folder manually:
+```
+git clone https://github.com/tmux-plugins/tpm"]="$df/.tmux/plugins/tpm .tmux/plugins/tpm
+```
 
-After running `setup.sh` make sure to open a tmux session and use the command `prefix + I` (capital i, as in **I**nstall) to fetch plugins
+Once you have all the repos, just run `stow .`.
+
+After running `stow`, make sure to open a tmux session and use the command `prefix + I` (capital i, as in **I**nstall) to fetch the tmux plugins.
+
 Otherwise, you will have no plugins. And you will be sad.
 
 ## For zsh keybinds
