@@ -1,0 +1,7 @@
+[user]
+	email = andrewnguyen@utexas.edu
+	name = Andrew Nguyen
+[safe]
+	directory = /root/
+[core]
+	editor = vim
