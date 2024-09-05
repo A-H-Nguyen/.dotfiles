@@ -12,9 +12,6 @@ fi
 alias ll='ls -lahF'
 alias l='ls -AF'
 
-# I'm too ADVANCED for old school vim
-alias vim='nvim'
-
 # Magnificent tmux aliases
 alias t='tmux new-session -A -s'
 alias ta='tmux attach-session -t'
