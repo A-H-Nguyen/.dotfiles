@@ -1,0 +1,11 @@
+# yazi.toml
+[manager]
+show_hidden = true
+show_symlink = true
+
+[opener]
+edit = [
+	{ run = 'nvim "$@"', block = true, desc = "Open with neovim", for = "unix" },
+	{ run = 'nvim "$0"', block = true, desc = "Open with neovim", for = "unix" },
+]
+
