@@ -14,34 +14,42 @@ config.harfbuzz_features = { 'calt=0', 'clig=0', 'liga=0' }
 --    '#181825',  -- Mantle
 --    '#11111b',  -- Crust
 config.color_scheme = 'Catppuccin Mocha'
+
 config.use_fancy_tab_bar = false
 config.colors = {
   tab_bar = {
-    -- The color of the strip that goes along the top of the window
-    -- (does not apply when fancy tab bar is in use)
     background = '#313244',
   }
 }
 
-config.window_background_gradient = {
-  -- Can be "Vertical" or "Horizontal".  Specifies the direction
-  -- in which the color gradient varies.  
-  orientation = 'Vertical',
+config.hide_tab_bar_if_only_one_tab = true
 
-  colors = {
-    '#313244',
-    '#1e1e2e',
-    '#181825',
-    '#11111b',
-  },
+-- config.window_background_gradient = {
+--   orientation = 'Vertical',
+--   interpolation = 'Linear',
+--   colors = {
+--     '#1e1e2e',
+--     -- '#313244',
+--     '#181825',
+--     '#11111b',
+--   },
+--   blend = 'Rgb',
+-- }
 
-  -- Specifies the interpolation style to be used.
-  -- "Linear", "Basis" and "CatmullRom" as supported.
-  interpolation = 'Linear',
+config.window_background_image = '/home/andrew/Pictures/volcano_manor.jpg'
 
-  -- How the colors are blended in the gradient.
-  -- "Rgb", "LinearRgb", "Hsv" and "Oklab" are supported.
-  blend = 'Rgb',
+config.window_background_image_hsb = {
+  -- Darken the background image by reducing it to 1/3rd
+  brightness = 0.3,
+
+  -- You can adjust the hue by scaling its value.
+  -- a multiplier of 1.0 leaves the value unchanged.
+  hue = 1.0,
+
+  -- You can adjust the saturation also.
+  saturation = 1.0,
 }
+
+-- config.window_background_opacity = 0.85
 
 return config
