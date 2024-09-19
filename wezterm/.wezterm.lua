@@ -37,19 +37,13 @@ config.hide_tab_bar_if_only_one_tab = true
 -- }
 
 config.window_background_image = '/home/andrew/Pictures/volcano_manor.jpg'
-
 config.window_background_image_hsb = {
-  -- Darken the background image by reducing it to 1/3rd
-  brightness = 0.3,
-
-  -- You can adjust the hue by scaling its value.
-  -- a multiplier of 1.0 leaves the value unchanged.
-  hue = 1.0,
-
-  -- You can adjust the saturation also.
-  saturation = 1.0,
+  brightness = 0.25,
+  hue = 0.5,
+  saturation = 1.05,
 }
 
+-- I think transparent terminal only looks good with tiling window managers
 -- config.window_background_opacity = 0.85
 
 return config
