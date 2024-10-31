@@ -80,13 +80,6 @@ That's the exact reason I was able to finally switch from symlinking with a bash
 
 Odds are, if I give fish an honest try, I'll end up loving it and abandonning zsh.
 
-I also want to use terminal emulators that aren't konsole. 
-I'm really not sure why.
-Terminal emulators like kitty and wezterm have *a lot* of features, sure.
-But in all honesty, I love konsole.
-It fits perfectly into Plasma KDE, and the only features I need from a terminal emulator are tabs (which I only use occasionaly thanks to tmux) and... well that's about it actually.
-So I'm not really sure what a different terminal emulator would really offer me, but in my opinion there's only one real way to find out.
-
 I also really, *really* want to switch to Hyprland.
 I just mentioned loving konsole, and in extension, I do really love KDE.
 But I remember when I used Archcraft and I ran openbox.
