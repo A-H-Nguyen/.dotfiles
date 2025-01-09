@@ -11,8 +11,8 @@ If somehow this repository contains a massive security risk for me please let me
 
 In order to use thiese dotfiles, you first download the needed applications, then create the submodules (if you want to also use my neovim config), and lastly initialize tmux plugins.
 
-### Setup
-## My Applications
+## Setup
+### My Applications
 They're my favorite :)
 
 I'm pretty sure these are all the programs that I need that are available via pacman. 
@@ -40,7 +40,22 @@ To update locate's database use this:
 sudo updatedb
 ```
 
-## External Repos
+#### Git config
+I keep forgetting these commands:
+```
+git config --global user.name <my_name>
+```
+
+
+```
+git config --global user.email <my_email>
+```
+
+```
+git config --global core.editor "nvim"
+```
+
+### External Repos
 I have a few submodules so make sure to run:
 ```
 git submodule update --init
@@ -61,7 +76,7 @@ After running `stow`, make sure to open a tmux session and use the command `pref
 
 Otherwise, you will have no plugins. And you will be sad.
 
-## For zsh keybinds
+### For zsh keybinds
 If any keybinding doesn't work probably, it might be because of your terminal emulator. 
 Try using the `sed -n l` command to look at the keycodes that are used by the current terminal emulator.
 The current setup assumes an xterm based emulator.
