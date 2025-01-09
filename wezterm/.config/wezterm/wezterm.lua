@@ -36,20 +36,33 @@ config.keys = keybinds
 config.pane_focus_follows_mouse = true
 
 --=============================================================================
---Set background. Make sure it's EITHER a background image or a gradient
+-- Set background. Make sure it's EITHER a background image or a gradient
+-- see background.lua for more info
 --=============================================================================
-config.window_background_image = '/home/andrew/Pictures/volcano_manor.jpg'
-config.window_background_image_hsb = {
-    brightness = 0.2,
-    hue = 0.5,
-    saturation = 1.05,
-}
+-- config.window_background_image = '/home/andrew/Pictures/volcano_manor.jpg'
+-- config.window_background_image_hsb = {
+--     brightness = 0.2,
+--     hue = 0.5,
+--     saturation = 1.05,
+-- }
 
 -- fancy gradient, incompatible with background image
--- config.window_background_gradient = background.gradient
+local gradient = {
+  orientation = 'Vertical',
+  interpolation = 'Linear',
+  colors = {
+    '#1e1e2e',
+    -- '#313244',
+    '#181825',
+    '#11111b',
+  },
+  blend = 'Rgb',
+}
+config.window_background_gradient = gradient
 
 -- I think transparent terminal only looks good with tiling window managers
--- config.window_background_opacity = background.opacity
+config.window_background_opacity = 0.85
+
 
 --=============================================================================
 return config

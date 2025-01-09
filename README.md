@@ -1,7 +1,8 @@
 # My Dotfiles! 
 My dotfiles.
 
-I use Arch, btw. ~~Um, actually I'm usually on EndeavourOS :neckbeard: (I have immense skill issues).~~
+I mainly use EndeavourOS because I'm too lazy to install pure Arch.
+I still just consider Endeavour to be Arch. However, feel free to make fun of me for not really using Arch, btw.
 
 ## Using this Repo
 If you'd like, you can just plagiarize these.
@@ -19,7 +20,6 @@ So on a fresh system use this as the "default" install command for system setup.
 ```
 sudo pacman -Syu \
 	base-devel \
-    discord \
     git \
     fzf \
     locate \
@@ -33,12 +33,7 @@ sudo pacman -Syu \
     zsh
 ```
 
-If `yay` isn't installed yet [then like, install it](https://www.howtogeek.com/how-to-install-and-use-yay-on-arch-linux/#building-yay-on-arch-linux).
-
-The only must have apps from yay that I use are slack and spotify.
-I do also use Firefox and Steam, the previous of which should be pre-installed by any linux distro (arch, btw probably doesn't lol).
-I don't want to include Steam in the "default" install command because not every computer needs it.
-For example, if I want to use a device for work and only work, or if I'm cloning this repo onto a server.
+If `yay` isn't installed yet [then like, install it](https://github.com/Jguer/yay).
 
 To update locate's database use this:
 ```
@@ -72,23 +67,11 @@ Try using the `sed -n l` command to look at the keycodes that are used by the cu
 The current setup assumes an xterm based emulator.
 
 ## Future Work
-I want to try switching to the fish shell.
-I tried using it for like, a day, but for some reason I went back to ZSH.
-To me, ZSH just feels like bash with a few extra bells and whistles.
-In an effort to not fall into the sunk cost fallacy, I need to be willing to switch to better technologies, even if I have spent a lot of time and effort with the previous method.
-That's the exact reason I was able to finally switch from symlinking with a bash script, to using the stow tool.
+I need to give the fsh shell an honest try. I used it once for a few minutes and thought it was neat.
+But that's not long enough to say whether I actually like it.
 
-Odds are, if I give fish an honest try, I'll end up loving it and abandonning zsh.
+I was doing some experimenting with Hyprland. That actually got me to finally try installing base Arch again.
+The archinstall script is so easy to use, I'm glad the devs at Archlinux created it.
+However, I'm still too lazy to make sure that I have *everything* set up correctly myself -- as in all the drivers for things like audio cards, etc.
+For now I'm sticking with Endeavour. But, I still plan on make a smexy Hyprland setup. (BECAUSE ENDEAVOUR IS STILL JUST ARCH)
 
-I also really, *really* want to switch to Hyprland.
-I just mentioned loving konsole, and in extension, I do really love KDE.
-But I remember when I used Archcraft and I ran openbox.
-
-Openbox was so good.
-
-Honestly, the way I use KDE is like a less efficient version of openbox or i3.
-Hyprland looks perfect for me, but man does it look like a pain in the booty to set up.
-
-One day!
-
-One day...
