@@ -7,3 +7,6 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:A-H-Nguyen/nvim.git
+[submodule "waybar/.config/waybar"]
+	path = waybar/.config/waybar
+	url = git@github.com:A-H-Nguyen/waybar-minimal.git
