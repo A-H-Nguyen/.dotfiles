@@ -4,6 +4,8 @@ local keybinds = require 'keybinds'
 
 local config = wezterm.config_builder()
 
+config.enable_wayland = false
+
 --=============================================================================
 -- Set font and disable ligatures
 --=============================================================================
