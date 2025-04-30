@@ -5,6 +5,7 @@ local keybinds = require 'keybinds'
 local config = wezterm.config_builder()
 
 config.enable_wayland = false
+config.audible_bell = "Disabled"
 
 --=============================================================================
 -- Set font and disable ligatures
@@ -63,7 +64,7 @@ local gradient = {
 config.window_background_gradient = gradient
 
 -- I think transparent terminal only looks good with tiling window managers
-config.window_background_opacity = 0.85
+-- config.window_background_opacity = 0.85
 
 
 --=============================================================================
