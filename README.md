@@ -1,10 +1,12 @@
 # My Dotfiles! 
+
 My dotfiles.
 
 I mainly use EndeavourOS because I'm too lazy to install pure Arch.
 I still just consider Endeavour to be Arch. However, feel free to make fun of me for not really using Arch, btw.
 
 ## Using this Repo
+
 If you'd like, you can just plagiarize these.
 I (hopefully) do not have anything private saved here.
 If somehow this repository contains a massive security risk for me please let me know while you hack me.
@@ -12,6 +14,7 @@ If somehow this repository contains a massive security risk for me please let me
 In order to use thiese dotfiles, you first download the needed applications, then create the submodules (if you want to also use my neovim config), and lastly initialize tmux plugins.
 
 ## Setup
+
 ### My Applications
 They're my favorite :)
 
@@ -40,19 +43,12 @@ To update locate's database use this:
 sudo updatedb
 ```
 
-#### Git config
+### Git config
 I keep forgetting these commands:
 ```
 git config --global user.name <my_name>
-```
-
-
-```
 git config --global user.email <my_email>
-```
-
-```
-git config --global core.editor "nvim"
+git config --global core.editor "nvim" # Or "vim"
 ```
 
 ### External Repos
@@ -62,10 +58,6 @@ git submodule update --init
 ```
 *If I ever nest submodules on a personal project, someone end me.*
 
-However, I wasn't comfortable having tpm as a submod, so clone that into this repo's folder manually:
-```
-git clone https://github.com/tmux-plugins/tpm tmux/.tmux/plugins/tpm
-```
 
 Once you have all the repos, run this from your home dir (or wherever this repo is cloned):
 ```
@@ -82,11 +74,12 @@ Try using the `sed -n l` command to look at the keycodes that are used by the cu
 The current setup assumes an xterm based emulator.
 
 ## Future Work
-I need to give the fsh shell an honest try. I used it once for a few minutes and thought it was neat.
-But that's not long enough to say whether I actually like it.
 
-I was doing some experimenting with Hyprland. That actually got me to finally try installing base Arch again.
-The archinstall script is so easy to use, I'm glad the devs at Archlinux created it.
-However, I'm still too lazy to make sure that I have *everything* set up correctly myself -- as in all the drivers for things like audio cards, etc.
-For now I'm sticking with Endeavour. But, I still plan on make a smexy Hyprland setup. (BECAUSE ENDEAVOUR IS STILL JUST ARCH)
+### Fsh shell config
+I had one, then I reinstalled my OS and forgot to save it. 
+I really like the fish shell. I think I'll eventually deprecate my zsh config.
+
+### Quick install
+
+I want to throw all these setup commands into a script. I'll do that later.
 

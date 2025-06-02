@@ -10,3 +10,6 @@
 [submodule "waybar/.config/waybar"]
 	path = waybar/.config/waybar
 	url = git@github.com:A-H-Nguyen/waybar-minimal.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
