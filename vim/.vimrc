@@ -1,6 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Install Plugins
-"
+""" Plugins
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """ This code block automates the install of vim-plug, but it's not neccessary
@@ -28,7 +27,7 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
-" Setup clangd
+" Setup LSPs
 if executable('clangd')
     augroup lsp_clangd
         autocmd!
@@ -40,14 +39,19 @@ if executable('clangd')
     augroup end
 endif
 
+if executable('pylsp')
+    " pip install python-lsp-server
+    au User lsp_setup call lsp#register_server({
+        \ 'name': 'pylsp',
+        \ 'cmd': {server_info->['pylsp']},
+        \ 'allowlist': ['python'],
+        \ })
+endif
+
 let g:lsp_document_highlight_enabled = 0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Make things prettier
+""" Make things prettier
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set number
@@ -61,14 +65,7 @@ endif
 colorscheme catppuccin_mocha
 let g:airline_theme = 'catppuccin_mocha'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Change default tab settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set expandtab
 set shiftwidth=4
 set softtabstop=4
@@ -77,24 +74,20 @@ set smartindent
 set autoindent
 
 " Make tab width file-dependent
+" Also add a column to denote where 80 chars is for C/C++ files
 filetype plugin indent on
 augroup filetype_indent
   autocmd!
   autocmd FileType python setlocal shiftwidth=4 softtabstop=4 tabstop=4
-  autocmd FileType cpp setlocal shiftwidth=2 softtabstop=2 tabstop=2
-  autocmd FileType c setlocal shiftwidth=2 softtabstop=2 tabstop=2
-augroup END
+  autocmd FileType cpp setlocal shiftwidth=2 softtabstop=2 tabstop=2 colorcolumn=81
+  autocmd FileType c setlocal shiftwidth=2 softtabstop=2 tabstop=2 colorcolumn=81
 
 autocmd FileType python setlocal commentstring=#\ %s
 autocmd FileType cpp setlocal commentstring=//\ %s
 autocmd FileType c setlocal commentstring=//\ %s
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remap
+""" Remap
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let mapleader = " "
@@ -110,7 +103,7 @@ nnoremap <leader>\| :vsplit<CR>
 
 " LSP
 nnoremap <leader>gd :LspDefinition<CR>
-nnoremap <leader>dn :LspDocumentDiagnostics<CR>
+nnoremap <leader>dc :LspDocumentDiagnostics<CR>
 nnoremap <leader>dn :LspNextDiagnostic<CR>
 nnoremap <leader>dp :LspPreviousDiagnostic<CR>
 nnoremap <leader>dl :LspReferences<CR>
@@ -118,7 +111,12 @@ nnoremap <leader>ds :LspDocumentSymbol<CR>
 nnoremap X :LspCodeAction<CR>
 nnoremap K :LspHover<CR>
 
+" Use ctrl + j/k to navigate popup menu if it's visible
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
+inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
+
 " Other
 nnoremap <leader>u :UndotreeToggle \| :UndotreeFocus<CR>
+nnoremap <leader>gi :Git<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

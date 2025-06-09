@@ -76,7 +76,18 @@ setopt INC_APPEND_HISTORY # append into history file
 setopt HIST_IGNORE_DUPS   # save only one command if 2 common are same and consistent
 setopt EXTENDED_HISTORY   # add timestamp for each entry
 
-# add custom git commands to PATH
-export PATH=$PATH:$HOME/.my-scripts
+export PATH=/home/andrew/projects/llvm-project/install/bin:/snap/bin:$PATH:$HOME/.my-scripts
+
+# Show system info only in new terminal emulator tabs/windows
+# - Run only in interactive shells
+# - Skip if inside tmux
+# - Prefer fastfetch if available, else fall back to neofetch
+if [[ $- == *i* ]] && [[ -z "$TMUX" ]]; then
+    if command -v fastfetch >/dev/null 2>&1; then
+        fastfetch
+    elif command -v neofetch >/dev/null 2>&1; then
+        neofetch
+    fi
+fi
 
 ### You're READY man!
