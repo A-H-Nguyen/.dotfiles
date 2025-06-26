@@ -1,7 +1,4 @@
 ### Activate the GLORIOUS powerlevel10k
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
@@ -17,9 +14,6 @@ typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 ### Keybindings
 
-# Currently all keycodes are TERMINAL EMULATOR SPECIFIC 
-# should work on xterm based emulators
-
 # Needed for tab completion 
 autoload -U compinit; compinit
 
@@ -27,8 +21,9 @@ autoload -U compinit; compinit
 zstyle ':completion:*' menu select
 
 # Bind Shift+Tab to go backward in the completion menu
-# also make sure that ctrl + left/right jumps bw words
 bindkey "^[[Z" reverse-menu-complete
+
+# Make sure that ctrl + left/right jumps bw words
 bindkey "^[[1;5D" backward-word
 bindkey "^[[1;5C" forward-word
 
@@ -61,7 +56,7 @@ bindkey "^[[B" down-line-or-beginning-search
 #      PageUp     "${terminfo[kpp]}"
 #      PageDown   "${terminfo[knp]}"
 
-### Load alias definitions.
+### Load aliases 
 if [ -f ~/.aliases ]; then
     . ~/.aliases
 fi
@@ -70,18 +65,15 @@ fi
 
 # It'd be good to have a history file
 export HISTFILE=~/.zsh_history
-export HISTSIZE=10000     # max number of history lines kept in a session
-export SAVEHIST=10000     # max number of lines kept in history file after logout
-setopt INC_APPEND_HISTORY # append into history file
-setopt HIST_IGNORE_DUPS   # save only one command if 2 common are same and consistent
-setopt EXTENDED_HISTORY   # add timestamp for each entry
+export HISTSIZE=10000
+export SAVEHIST=10000
+setopt INC_APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt EXTENDED_HISTORY
 
-export PATH=/home/andrew/projects/llvm-project/install/bin:/snap/bin:$PATH:$HOME/.my-scripts
-
-# Show system info only in new terminal emulator tabs/windows
-# - Run only in interactive shells
-# - Skip if inside tmux
-# - Prefer fastfetch if available, else fall back to neofetch
+### Run neofetch or fastfetch whenever I open a new terminal emulator window so
+### everyone knows that I use Arch, btw
+### * Is not run while inside tmux
 if [[ $- == *i* ]] && [[ -z "$TMUX" ]]; then
     if command -v fastfetch >/dev/null 2>&1; then
         fastfetch
