@@ -10,3 +10,6 @@
 [submodule "tmux/.tmux/plugins/tpm"]
 	path = tmux/.tmux/plugins/tpm
 	url = https://github.com/tmux-plugins/tpm
+[submodule "fish/.config/fish"]
+	path = fish/.config/fish
+	url = git@github.com:A-H-Nguyen/fish-config.git
