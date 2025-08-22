@@ -2,16 +2,17 @@
 
 My dotfiles.
 
-I mainly use EndeavourOS because I'm too lazy to install pure Arch.
-I still just consider Endeavour to be Arch. However, feel free to make fun of me for not really using Arch, btw.
+~I mainly use EndeavourOS because I'm too lazy to install pure Arch.~
+~I still just consider Endeavour to be Arch. However, feel free to make fun of me for not really using Arch, btw.~
+
+*Update August 2025:* I use Arch, btw. :sunglasses:
 
 ## Using this Repo
 
 If you'd like, you can just plagiarize these.
 I (hopefully) do not have anything private saved here.
-If somehow this repository contains a massive security risk for me please let me know while you hack me.
 
-In order to use thiese dotfiles, you first download the needed applications, then create the submodules (if you want to also use my neovim config), and lastly initialize tmux plugins.
+In order to use these dotfiles, you first download the needed applications, then create the submodules (if you want to also use my neovim config), and lastly initialize tmux plugins.
 
 ## Setup
 
@@ -22,10 +23,13 @@ I'm pretty sure these are all the programs that I need that are available via pa
 So on a fresh system use this as the "default" install command for system setup.
 ```
 sudo pacman -Syu \
+    base \
 	base-devel \
-    git \
+    7zip \
+    fish \
     fzf \
-    locate \
+    git \
+    lua \
     luarocks \
     neovim \
     ripgrep \
@@ -37,11 +41,6 @@ sudo pacman -Syu \
 ```
 
 If `yay` isn't installed yet [then like, install it](https://github.com/Jguer/yay).
-
-To update locate's database use this:
-```
-sudo updatedb
-```
 
 ### Git config
 I keep forgetting these commands:
@@ -73,13 +72,21 @@ If any keybinding doesn't work probably, it might be because of your terminal em
 Try using the `sed -n l` command to look at the keycodes that are used by the current terminal emulator.
 The current setup assumes an xterm based emulator.
 
-## Future Work
+## Future Work/To Do
 
-### Fsh shell config
-I had one, then I reinstalled my OS and forgot to save it. 
-I really like the fish shell. I think I'll eventually deprecate my zsh config.
+### VERY IMPORTANT MISSING THING
+I don't have sick screenshots of my setup because I'm in the middle of ricing :(
 
-### Quick install
+### More Configs
+Speaking of ricing, Hyprland dotfiles are incoming!
 
-I want to throw all these setup commands into a script. I'll do that later.
+Wezterm is awful on Hyprland so I'm using kitty for now.
+Turns out, kitty can display gifs in the terminal using `kitten icat <filename>` (with `icat` being used for any image file).
+
+The developer of kitty is like, definitely a furry right?
+
+Anyway, I found an artist named [NicoCuu](https://www.deviantart.com/nicocuu) and he's made some amazing animated backgrounds.
+Turns out, using that art in something like `fastfetch` looks awesome.
+
+I also want to customize dunst, sddm, and more.
 
