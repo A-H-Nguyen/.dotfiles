@@ -90,3 +90,31 @@ Turns out, using that art in something like `fastfetch` looks awesome.
 
 I also want to customize dunst, sddm, and more.
 
+### Docs
+
+I should really write down all the little apps I download to get hyprland working how I want it...
+```
+brightnessctl
+hypridle
+hyprlock
+hyprpolkitagent
+network-manager-applet
+nwg-panel
+wayclip # probably uneccessary?
+```
+
+From the archinstall script:
+```
+hyprland
+dunst
+kitty
+uwsm
+dolphin
+wofi
+xdg-desktop-portal-hyprland
+qt5-wayland
+qt6-wayland
+polkit-kde-agent
+grim
+slurp
+```
