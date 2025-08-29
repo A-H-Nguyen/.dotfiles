@@ -1,0 +1,28 @@
+#!/bin/sh
+
+hyprctl keyword workspace "1, monitor:desc:Ancor Communications Inc VS24A E6LMQS098584"
+hyprctl keyword workspace "2, monitor:desc:Ancor Communications Inc VS24A E6LMQS098584"
+hyprctl keyword workspace "3, monitor:desc:Ancor Communications Inc VS24A E6LMQS098584"
+hyprctl keyword workspace "4, monitor:desc:Ancor Communications Inc VS24A E6LMQS098584"
+hyprctl keyword workspace "5, monitor:desc:Ancor Communications Inc VS24A E6LMQS098584"
+
+hyprctl keyword workspace "6, monitor:desc:Dell Inc. DELL U2412M M2GCR24R314L"
+hyprctl keyword workspace "7, monitor:desc:Dell Inc. DELL U2412M M2GCR24R314L"
+hyprctl keyword workspace "8, monitor:desc:Dell Inc. DELL U2412M M2GCR24R314L"
+hyprctl keyword workspace "9, monitor:desc:Dell Inc. DELL U2412M M2GCR24R314L"
+hyprctl keyword workspace "0, monitor:desc:Dell Inc. DELL U2412M M2GCR24R314L"
+
+hyprctl dispatch moveworkspacetomonitor 1 "desc:Ancor Communications Inc VS24A E6LMQS098584"
+hyprctl dispatch moveworkspacetomonitor 2 "desc:Ancor Communications Inc VS24A E6LMQS098584"
+# hyprctl dispatch moveworkspacetomonitor 3 "desc:Ancor Communications Inc VS24A E6LMQS098584"
+# hyprctl dispatch moveworkspacetomonitor 4 "desc:Ancor Communications Inc VS24A E6LMQS098584"
+# hyprctl dispatch moveworkspacetomonitor 5 "desc:Ancor Communications Inc VS24A E6LMQS098584"
+
+hyprctl dispatch moveworkspacetomonitor 6 "desc:Dell Inc. DELL U2412M M2GCR24R314L"
+hyprctl dispatch moveworkspacetomonitor 7 "desc:Dell Inc. DELL U2412M M2GCR24R314L"
+hyprctl dispatch moveworkspacetomonitor 8 "desc:Dell Inc. DELL U2412M M2GCR24R314L"
+# hyprctl dispatch moveworkspacetomonitor 9 "desc:Dell Inc. DELL U2412M M2GCR24R314L"
+# hyprctl dispatch moveworkspacetomonitor 0 "desc:Dell Inc. DELL U2412M M2GCR24R314L"
+
+hyprctl keyword monitor "eDP-1,disable"
+
