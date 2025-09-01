@@ -1,0 +1,21 @@
+#!/bin/sh
+
+hyprctl keyword monitor "eDP-1, 1920x1080, auto, 1"
+
+hyprctl keyword workspace "1, monitor:eDP-1"
+hyprctl keyword workspace "2, monitor:eDP-1"
+hyprctl keyword workspace "3, monitor:eDP-1"
+hyprctl keyword workspace "4, monitor:eDP-1"
+hyprctl keyword workspace "5, monitor:eDP-1"
+hyprctl keyword workspace "6, monitor:eDP-1"
+hyprctl keyword workspace "7, monitor:eDP-1"
+hyprctl keyword workspace "8, monitor:eDP-1"
+hyprctl keyword workspace "9, monitor:eDP-1"
+hyprctl keyword workspace "0, monitor:eDP-1"
+
+hyprctl dispatch moveworkspacetomonitor 1 "eDP-1"
+hyprctl dispatch moveworkspacetomonitor 2 "eDP-1"
+hyprctl dispatch moveworkspacetomonitor 3 "eDP-1"
+hyprctl dispatch moveworkspacetomonitor 6 "eDP-1"
+hyprctl dispatch moveworkspacetomonitor 7 "eDP-1"
+hyprctl dispatch moveworkspacetomonitor 8 "eDP-1"
