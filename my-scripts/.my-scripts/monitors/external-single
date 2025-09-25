@@ -1,6 +1,7 @@
 #!/bin/sh
 
-hyprctl keyword monitor "desc:Acer Technologies ED270U P2 34250AF3B3W01, 2560x1440, auto, 1"
+# hyprctl keyword monitor "desc:Acer Technologies ED270U P2 34250AF3B3W01, 2560x1440, auto, 1"
+hyprctl keyword monitor "HDMI-A-1, preferred, 2560x1440, auto, 1"
 
 hyprctl keyword workspace "1, monitor:desc:Acer Technologies ED270U P2 34250AF3B3W01"
 hyprctl keyword workspace "2, monitor:desc:Acer Technologies ED270U P2 34250AF3B3W01"

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+state=$(upower -i "$(upower -e | grep BAT)" | grep -E "state" | awk '{print $2}' | tr -d '%')
+
+if [ "$state" != "discharging" ]; then
+    hyprctl keyword monitor "eDP-1, 1920x1080, auto, 1"
+fi
+

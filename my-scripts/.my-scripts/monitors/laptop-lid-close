@@ -3,9 +3,10 @@
 state=$(upower -i "$(upower -e | grep BAT)" | grep -E "state" | awk '{print $2}' | tr -d '%')
 
 if [ "$state" = "discharging" ]; then
-    pidof hyprlock >/dev/null || hyprlock &
-    disown
-    systemctl suspend
+    pidof hyprlock || hyprlock & disown && systemctl suspend
+    # pidof hyprlock >/dev/null || hyprlock &
+    # disown
+    # systemctl suspend
 else
     hyprctl keyword monitor "eDP-1,disable"
 fi
