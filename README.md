@@ -19,7 +19,7 @@ In order to use these dotfiles, you first download the needed applications, then
 ### My Applications
 They're my favorite :)
 
-I'm pretty sure these are all the programs that I need that are available via pacman. 
+I'm pretty sure these are all the programs that I *need* need. 
 So on a fresh system use this as the "default" install command for system setup.
 ```
 sudo pacman -Syu \
@@ -36,11 +36,51 @@ sudo pacman -Syu \
     stow \
     tmux \
     unzip \
-    yazi \
-    zsh
+    yazi
 ```
 
-If `yay` isn't installed yet [then like, install it](https://github.com/Jguer/yay).
+#### AUR
+If `yay` isn't installed yet [then like, install it dude](https://github.com/Jguer/yay).
+
+#### Fonts
+```
+yay -S ttf-arimo-nerd ttf-bigblueterminal-nerd ttf-0xproto-nerd ttf-proggyclean-nerd
+```
+
+#### Hyprland
+Don't read this.
+
+##### I'm reading this
+To use hyprland install these:
+```
+brightnessctl
+dolphin
+dunst
+kitty
+wofi
+xdg-desktop-portal-hyprland
+qt5-wayland
+qt6-wayland
+hypridle
+hyprlock
+hyprpolkitagent
+network-manager-applet
+jq 
+swww 
+wayclip
+grim
+slurp
+sddm
+hyprland
+```
+
+##### Notes:
+ - I hate dolphin, replace this with a diff file manager, future me
+ - `jq` is just a json pasrer, but I need it for my monitor scripts. Of course, parsing json is nice in general :3
+ - I can never remember the right number of W's for `swww` so I rely on fish autocomplete lol
+ - `wayclip` is probably uneccessary? I only tried it for integrating nvim yank into my clipboard. Didn't work. Hate it.
+ - The archinstall script also installs `uwsm`. I don't think it's necessary (maybe I'll eat my words some day).
+
 
 ### Git config
 I keep forgetting these commands:
@@ -90,31 +130,3 @@ Turns out, using that art in something like `fastfetch` looks awesome.
 
 I also want to customize dunst, sddm, and more.
 
-### Docs
-
-I should really write down all the little apps I download to get hyprland working how I want it...
-```
-brightnessctl
-hypridle
-hyprlock
-hyprpolkitagent
-network-manager-applet
-nwg-panel
-wayclip # probably uneccessary?
-```
-
-From the archinstall script:
-```
-hyprland
-dunst
-kitty
-uwsm
-dolphin
-wofi
-xdg-desktop-portal-hyprland
-qt5-wayland
-qt6-wayland
-polkit-kde-agent
-grim
-slurp
-```
