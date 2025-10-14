@@ -44,14 +44,16 @@ If `yay` isn't installed yet [then like, install it dude](https://github.com/Jgu
 
 #### Fonts
 ```
-yay -S ttf-arimo-nerd ttf-bigblueterminal-nerd ttf-0xproto-nerd ttf-proggyclean-nerd
+yay -S ttf-arimo-nerd ttf-bigblueterminal-nerd ttf-0xproto-nerd ttf-proggyclean-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji
 ```
 
 #### Hyprland
 Don't read this.
 
 ##### I'm reading this
-To use hyprland install these:
+Here's what I'm using for Hyprlan. I don't think that all of these are required, nor are all of these the best choices.
+
+If you really want to install hyprland, ignore what I have here, and go to the official docs.
 ```
 brightnessctl
 dolphin
@@ -80,6 +82,7 @@ hyprland
  - I can never remember the right number of W's for `swww` so I rely on fish autocomplete lol
  - `wayclip` is probably uneccessary? I only tried it for integrating nvim yank into my clipboard. Didn't work. Hate it.
  - The archinstall script also installs `uwsm`. I don't think it's necessary (maybe I'll eat my words some day).
+ - Is there an advantage to using the AUR versions of hyprland, hyprlock, etc.?
 
 
 ### Git config
@@ -100,7 +103,7 @@ git submodule update --init
 
 Once you have all the repos, run this from your home dir (or wherever this repo is cloned):
 ```
-stow -d .dotfiles -S my-scripts nvim tmux zsh
+stow -d .dotfiles -S my-scripts nvim tmux
 ```
 
 After running `stow`, make sure to open a tmux session and use the command `prefix + I` (capital i, as in **I**nstall) to fetch the tmux plugins.
@@ -115,7 +118,7 @@ The current setup assumes an xterm based emulator.
 ## Future Work/To Do
 
 ### VERY IMPORTANT MISSING THING
-I don't have sick screenshots of my setup because I'm in the middle of ricing :(
+I don't have sick screenshots of my setup because my ricing is still WIP :(
 
 ### More Configs
 Speaking of ricing, Hyprland dotfiles are incoming!
@@ -124,9 +127,6 @@ Wezterm is awful on Hyprland so I'm using kitty for now.
 Turns out, kitty can display gifs in the terminal using `kitten icat <filename>` (with `icat` being used for any image file).
 
 The developer of kitty is like, definitely a furry right?
-
-Anyway, I found an artist named [NicoCuu](https://www.deviantart.com/nicocuu) and he's made some amazing animated backgrounds.
-Turns out, using that art in something like `fastfetch` looks awesome.
 
 I also want to customize dunst, sddm, and more.
 
