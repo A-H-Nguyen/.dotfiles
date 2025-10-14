@@ -1,58 +1,96 @@
 # My Dotfiles! 
+
 My dotfiles.
 
-I mainly use EndeavourOS because I'm too lazy to install pure Arch.
-I still just consider Endeavour to be Arch. However, feel free to make fun of me for not really using Arch, btw.
+~I mainly use EndeavourOS because I'm too lazy to install pure Arch.~
+~I still just consider Endeavour to be Arch. However, feel free to make fun of me for not really using Arch, btw.~
+
+*Update August 2025:* I use Arch, btw. :sunglasses:
 
 ## Using this Repo
+
 If you'd like, you can just plagiarize these.
 I (hopefully) do not have anything private saved here.
-If somehow this repository contains a massive security risk for me please let me know while you hack me.
 
-In order to use thiese dotfiles, you first download the needed applications, then create the submodules (if you want to also use my neovim config), and lastly initialize tmux plugins.
+In order to use these dotfiles, you first download the needed applications, then create the submodules (if you want to also use my neovim config), and lastly initialize tmux plugins.
 
 ## Setup
+
 ### My Applications
 They're my favorite :)
 
-I'm pretty sure these are all the programs that I need that are available via pacman. 
+I'm pretty sure these are all the programs that I *need* need. 
 So on a fresh system use this as the "default" install command for system setup.
 ```
 sudo pacman -Syu \
+    base \
 	base-devel \
-    git \
+    7zip \
+    fish \
     fzf \
-    locate \
+    git \
+    lua \
     luarocks \
     neovim \
     ripgrep \
     stow \
     tmux \
     unzip \
-    yazi \
-    zsh
+    yazi
 ```
 
-If `yay` isn't installed yet [then like, install it](https://github.com/Jguer/yay).
+#### AUR
+If `yay` isn't installed yet [then like, install it dude](https://github.com/Jguer/yay).
 
-To update locate's database use this:
+#### Fonts
 ```
-sudo updatedb
+yay -S ttf-arimo-nerd ttf-bigblueterminal-nerd ttf-0xproto-nerd ttf-proggyclean-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji
 ```
 
-#### Git config
+#### Hyprland
+Don't read this.
+
+##### I'm reading this
+Here's what I'm using for Hyprlan. I don't think that all of these are required, nor are all of these the best choices.
+
+If you really want to install hyprland, ignore what I have here, and go to the official docs.
+```
+brightnessctl
+dolphin
+dunst
+kitty
+wofi
+xdg-desktop-portal-hyprland
+qt5-wayland
+qt6-wayland
+hypridle
+hyprlock
+hyprpolkitagent
+network-manager-applet
+jq 
+swww 
+wayclip
+grim
+slurp
+sddm
+hyprland
+```
+
+##### Notes:
+ - I hate dolphin, replace this with a diff file manager, future me
+ - `jq` is just a json pasrer, but I need it for my monitor scripts. Of course, parsing json is nice in general :3
+ - I can never remember the right number of W's for `swww` so I rely on fish autocomplete lol
+ - `wayclip` is probably uneccessary? I only tried it for integrating nvim yank into my clipboard. Didn't work. Hate it.
+ - The archinstall script also installs `uwsm`. I don't think it's necessary (maybe I'll eat my words some day).
+ - Is there an advantage to using the AUR versions of hyprland, hyprlock, etc.?
+
+
+### Git config
 I keep forgetting these commands:
 ```
 git config --global user.name <my_name>
-```
-
-
-```
 git config --global user.email <my_email>
-```
-
-```
-git config --global core.editor "nvim"
+git config --global core.editor "nvim" # Or "vim"
 ```
 
 ### External Repos
@@ -62,14 +100,10 @@ git submodule update --init
 ```
 *If I ever nest submodules on a personal project, someone end me.*
 
-However, I wasn't comfortable having tpm as a submod, so clone that into this repo's folder manually:
-```
-git clone https://github.com/tmux-plugins/tpm tmux/.tmux/plugins/tpm
-```
 
 Once you have all the repos, run this from your home dir (or wherever this repo is cloned):
 ```
-stow -d .dotfiles -S my-scripts nvim tmux zsh
+stow -d .dotfiles -S my-scripts nvim tmux
 ```
 
 After running `stow`, make sure to open a tmux session and use the command `prefix + I` (capital i, as in **I**nstall) to fetch the tmux plugins.
@@ -81,12 +115,18 @@ If any keybinding doesn't work probably, it might be because of your terminal em
 Try using the `sed -n l` command to look at the keycodes that are used by the current terminal emulator.
 The current setup assumes an xterm based emulator.
 
-## Future Work
-I need to give the fsh shell an honest try. I used it once for a few minutes and thought it was neat.
-But that's not long enough to say whether I actually like it.
+## Future Work/To Do
 
-I was doing some experimenting with Hyprland. That actually got me to finally try installing base Arch again.
-The archinstall script is so easy to use, I'm glad the devs at Archlinux created it.
-However, I'm still too lazy to make sure that I have *everything* set up correctly myself -- as in all the drivers for things like audio cards, etc.
-For now I'm sticking with Endeavour. But, I still plan on make a smexy Hyprland setup. (BECAUSE ENDEAVOUR IS STILL JUST ARCH)
+### VERY IMPORTANT MISSING THING
+I don't have sick screenshots of my setup because my ricing is still WIP :(
+
+### More Configs
+Speaking of ricing, Hyprland dotfiles are incoming!
+
+Wezterm is awful on Hyprland so I'm using kitty for now.
+Turns out, kitty can display gifs in the terminal using `kitten icat <filename>` (with `icat` being used for any image file).
+
+The developer of kitty is like, definitely a furry right?
+
+I also want to customize dunst, sddm, and more.
 

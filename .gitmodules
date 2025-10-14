@@ -7,6 +7,12 @@
 [submodule "nvim/.config/nvim"]
 	path = nvim/.config/nvim
 	url = git@github.com:A-H-Nguyen/nvim.git
+[submodule "tmux/.tmux/plugins/tpm"]
+	path = tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "fish/.config/fish"]
+	path = fish/.config/fish
+	url = git@github.com:A-H-Nguyen/fish-config.git
 [submodule "waybar/.config/waybar"]
 	path = waybar/.config/waybar
-	url = git@github.com:A-H-Nguyen/waybar-minimal.git
+	url = git@github.com:A-H-Nguyen/waybar.git
