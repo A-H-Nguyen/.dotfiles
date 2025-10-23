@@ -17,9 +17,8 @@ hyprctl keyword workspace "0, monitor:desc:Acer Technologies ED270U P2 34250AF3B
 hyprctl dispatch moveworkspacetomonitor 1 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
 hyprctl dispatch moveworkspacetomonitor 2 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
 hyprctl dispatch moveworkspacetomonitor 3 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
+hyprctl dispatch moveworkspacetomonitor 4 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
 
-hyprctl dispatch moveworkspacetomonitor 6 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
-hyprctl dispatch moveworkspacetomonitor 7 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
-hyprctl dispatch moveworkspacetomonitor 8 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
-
-hyprctl keyword monitor "eDP-1,disable"
+# hyprctl dispatch moveworkspacetomonitor 6 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
+# hyprctl dispatch moveworkspacetomonitor 7 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
+# hyprctl dispatch moveworkspacetomonitor 8 "desc:Acer Technologies ED270U P2 34250AF3B3W01"
