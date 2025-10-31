@@ -40,8 +40,17 @@ I've seen a friend of mine using a different AUR package manager, but `yay` stil
 
 ## Fonts
 ```
-yay -S ttf-arimo-nerd ttf-bigblueterminal-nerd ttf-0xproto-nerd ttf-proggyclean-nerd noto-fonts noto-fonts-cjk noto-fonts-emoji
+yay -S \
+    ttf-arimo-nerd \
+    ttf-bigblueterminal-nerd \
+    ttf-0xproto-nerd \
+    ttf-proggyclean-nerd \
+    noto-fonts \
+    noto-fonts-cjk \
+    noto-fonts-emoji
 ```
+
+Check for installed fonts with `fc-list`.
 
 The noto fonts have all the katanan and hiragana.
 0xProto is the best looking nerd font for the terminal I've seen so far, but I might change my mind again some day.
