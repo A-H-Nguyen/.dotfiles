@@ -127,10 +127,9 @@ The current setup assumes an xterm based emulator.
 ## Future Work/To Do
  - [] Add alternate colorschemes like in [this](https://www.youtube.com/watch?v=NrRVr-kysko)
  - [] Learn how to make eww widgets and connect them to my waybar
-   - A better power menu
-   - A notification list
-   - Maybe a wrapper for pulseaudio?
-   - Mini media player???
+   - [] Better power menu
+   - [] Notification list
+   - [] Maybe a wrapper for pulseaudio?
  - [] Customize dunst
  - [] Customize rofi
  - [] Customize sddm?
