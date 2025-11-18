@@ -1,0 +1,10 @@
+#!/bin/sh
+
+hyprctl keyword monitor "HDMI-A-1, preferred, auto, 1"
+
+hyprctl dispatch moveworkspacetomonitor 1 "HDMI-A-1"
+hyprctl dispatch moveworkspacetomonitor 2 "HDMI-A-1"
+hyprctl dispatch moveworkspacetomonitor 3 "HDMI-A-1"
+hyprctl dispatch moveworkspacetomonitor 6 "eDP-1"
+hyprctl dispatch moveworkspacetomonitor 7 "eDP-1"
+hyprctl dispatch moveworkspacetomonitor 8 "eDP-1"
