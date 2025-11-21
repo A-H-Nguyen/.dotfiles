@@ -9,11 +9,13 @@ I use Arch, btw. :sunglasses:
 If you'd like, you can just plagiarize these.
 I (hopefully) do not have anything private saved here.
 
-## My Applications
-They're my favorite :)
+To use these dotfiles, first install all the applications in the next sections, then clone this repo into your `$HOME` dir and follow the steps in the Symlinking section.
 
-I'm pretty sure these are all the programs that I *need* need. 
-So on a fresh system use this as the "default" install command for system setup.
+## Installing Applications
+### Initial setup
+*For future me:* Install these before you even clone this repo!
+
+I'm pretty sure these are all the programs that I *need* need:
 ```
 sudo pacman -Syu \
     base \
@@ -24,21 +26,28 @@ sudo pacman -Syu \
     git \
     lua \
     luarocks \
+    tmux \
     neovim \
     ripgrep \
-    stow \
-    tmux \
     unzip \
+    stow \
+    fish \
     yazi
 ```
-There's probably packages that I use a lot that I've forgotten to include in this README and it's gonna be a massive pain in the ass for future machine setups
+There's probably packages that I use a lot that I've forgotten to include in this README and it's gonna be a massive pain in the ass for future machine setups.
+
+Specifically, firefox and slack, but also little things like network manager and bluetootch drivers.
+I treat these on a per-arch install basis :grinning:.
+
+This is a safe/good-enough "default" install command for system setup on a fresh Arch install.
+
 
 ### AUR
 If `yay` isn't installed yet [then like, install it dude](https://github.com/Jguer/yay).
 
 I've seen a friend of mine using a different AUR package manager, but `yay` still works fine for me, and I see no reason to change.
 
-## Fonts
+### Fonts
 ```
 yay -S \
     ttf-arimo-nerd \
@@ -55,19 +64,47 @@ Check for installed fonts with `fc-list`.
 The noto fonts have all the katanan and hiragana.
 0xProto is the best looking nerd font for the terminal I've seen so far, but I might change my mind again some day.
 
+## Git config
+I keep forgetting these commands:
+```
+git config --global user.name <my_name>
+git config --global user.email <my_email>
+git config --global core.editor "nvim" # Or "vim"
+```
+
+## Symlinking
+### Step 1. Submodules
+I have a few submodules so make sure to run:
+```
+git submodule update --init
+```
+#### Notes for Submodules:
+ - If I ever nest submodules on a personal project, someone end me.
+ - Some of these submodules are really, really small. Are they worth having as submods?
+
+### Step 2. Run Stow
+Once you have all the repos, run this from the home dir
+```
+stow -d .dotfiles -S fish hypr my-scripts nvim rofi tmux waybar
+```
+
+### Step 3. Tmux Plguins
+After running `stow`, make sure to open a tmux session and use the command `prefix + I` (capital i, as in **I**nstall) to fetch the tmux plugins.
+
+Otherwise, you will have no plugins. And you will be sad.
+
 ## Hyprland
 Don't read this.
 
 ##### I'm reading this
 Here's what I'm using for Hyprland. I don't think that all of these are required, nor are all of these the best choices.
-
-If you really want to install hyprland, ignore what I have here, and go to the official docs.
 ```
 brightnessctl
 dolphin
 dunst
 kitty
 rofi
+pavucontrol
 xdg-desktop-portal-hyprland
 qt5-wayland
 qt6-wayland
@@ -79,66 +116,37 @@ jq
 swww 
 grim
 slurp
+thunar
+thunderbird
 sddm
 hyprland
 ```
 
+If you really want to install hyprland, ignore what I have here, and go to the official docs.
+
 ### Notes for Hyprland:
- - I hate dolphin, replace this with a diff file manager, future me
  - `jq` is just a json pasrer, but I need it for my monitor scripts
- - I can never remember the right number of W's for `swww` 
+ - `swww` is being renamed to `awww` see this [blog post](https://www.lgfae.com/posts/2025-10-29-RenamingSwww.html). Eventually, the arch package should change
  - I tried `wayclip` for integrating nvim yank into my clipboard. Didn't work. Hate it. Need to find something else bc it's annoying af right now.
  - The archinstall script also installs `uwsm`. I don't think it's necessary (maybe I'll eat my words some day, but I've been fine without it for months).
  - Is there an advantage to using the AUR versions of hyprland, hyprlock, etc.?
  - The developer of kitty is like, definitely a furry right?
 
-## Git config
-I keep forgetting these commands:
-```
-git config --global user.name <my_name>
-git config --global user.email <my_email>
-git config --global core.editor "nvim" # Or "vim"
-```
-
-## Submodules
-I have a few submodules so make sure to run:
-```
-git submodule update --init
-```
-*If I ever nest submodules on a personal project, someone end me.*
-
-## Stow
-Once you have all the repos, run this from your home dir (or wherever this repo is cloned):
-```
-stow -d .dotfiles -S my-scripts nvim tmux
-```
-
-This is an incomplete command on purpose. Not every system will use every stow "package".
-
-After running `stow`, make sure to open a tmux session and use the command `prefix + I` (capital i, as in **I**nstall) to fetch the tmux plugins.
-
-Otherwise, you will have no plugins. And you will be sad.
-
-## For zsh keybinds
-If any keybinding doesn't work probably, it might be because of your terminal emulator. 
-Try using the `sed -n l` command to look at the keycodes that are used by the current terminal emulator.
-The current setup assumes an xterm based emulator.
-
 ## Future Work/To Do
- - [] Add alternate colorschemes like in [this](https://www.youtube.com/watch?v=NrRVr-kysko)
- - [] Learn how to make eww widgets and connect them to my waybar
-   - [] Better power menu
-   - [] Notification list
-   - [] Maybe a wrapper for pulseaudio?
- - [] Customize dunst
- - [] Customize rofi
- - [] Customize sddm?
+ - Add alternate colorschemes like in [this](https://www.youtube.com/watch?v=NrRVr-kysko)
+ - Learn how to make eww widgets and connect them to my waybar
+   - Better power menu
+   - Notification list
+   - Maybe a wrapper for pulseaudio/widget for controling volume and choosing audio devices? (probably a pain in the ass)
+ - Customize dunst
+ - Customize rofi
+ - Customize sddm?
    - Probably waaaay more trouble than it's worth. I rarely ever see my sddm screen 
- - [] Edit NeoVim Dashboard
- - [] Update Nvim TreeSitter
+ - Edit NeoVim Dashboard
+ - Update Nvim Mason 
+ - Update Nvim TreeSitter
    - [helpful reddit thread](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
- - [] Make submodule repo for Hypr confs
- - [] Make my fast fetch prettier `:3`
+ - Make my fast fetch prettier `:3`
 
 ### VERY IMPORTANT MISSING THING
 I don't have sick screenshots of my setup because my ricing is still WIP :(
