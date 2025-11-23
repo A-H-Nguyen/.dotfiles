@@ -98,27 +98,28 @@ Don't read this.
 
 ##### I'm reading this
 Here's what I'm using for Hyprland. I don't think that all of these are required, nor are all of these the best choices.
-```
-brightnessctl
-dolphin
-dunst
-kitty
-rofi
-pavucontrol
-xdg-desktop-portal-hyprland
-qt5-wayland
-qt6-wayland
-hypridle
-hyprlock
-hyprpolkitagent
-network-manager-applet
-jq 
-swww 
-grim
-slurp
-thunar
-thunderbird
-sddm
+```bash
+sudo pacman -S \
+brightnessctl \
+dolphin \
+dunst \
+kitty \
+rofi \
+pavucontrol \
+xdg-desktop-portal-hyprland \
+qt5-wayland \
+qt6-wayland \
+hypridle \
+hyprlock \
+hyprpolkitagent \
+network-manager-applet \
+jq  \
+swww  \
+grim \
+slurp \
+thunar \
+thunderbird \
+sddm \
 hyprland
 ```
 
