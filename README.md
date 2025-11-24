@@ -101,7 +101,6 @@ Here's what I'm using for Hyprland. I don't think that all of these are required
 ```bash
 sudo pacman -S \
 brightnessctl \
-dolphin \
 dunst \
 kitty \
 rofi \
@@ -120,6 +119,7 @@ slurp \
 thunar \
 thunderbird \
 sddm \
+waybar \
 hyprland
 ```
 
@@ -144,9 +144,6 @@ If you really want to install hyprland, ignore what I have here, and go to the o
  - Customize sddm?
    - Probably waaaay more trouble than it's worth. I rarely ever see my sddm screen 
  - Edit NeoVim Dashboard
- - Update Nvim Mason 
- - Update Nvim TreeSitter
-   - [helpful reddit thread](https://www.reddit.com/r/neovim/comments/1kuj9xm/has_anyone_successfully_switched_to_the_new/)
  - Make my fast fetch prettier `:3`
 
 ### VERY IMPORTANT MISSING THING
