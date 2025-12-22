@@ -1,0 +1,12 @@
+#!/bin/sh
+
+NAME=$(hyprctl -j monitors | jq -r '.[].name' | grep -v "eDP-1")
+
+hyprctl keyword monitor "$NAME, preferred, auto, 1"
+
+hyprctl dispatch moveworkspacetomonitor 1 "$NAME"
+hyprctl dispatch moveworkspacetomonitor 2 "$NAME"
+hyprctl dispatch moveworkspacetomonitor 3 "$NAME"
+hyprctl dispatch moveworkspacetomonitor 6 "$NAME"
+hyprctl dispatch moveworkspacetomonitor 7 "$NAME"
+hyprctl dispatch moveworkspacetomonitor 8 "$NAME"
