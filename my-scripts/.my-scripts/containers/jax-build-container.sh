@@ -1,7 +1,15 @@
 #!/bin/bash
 
-IMAGE="ghcr.io/rocm/jax-dev-ubu24.rocm720:latest"
-CONTAINER_NAME="${USER}_jax_v092"
+# Check if image name was provided
+if [ ! $# -eq 1 ]; then
+    echo "Usage: $0 <image_name>"
+    exit 1
+fi
+
+# IMAGE="ghcr.io/rocm/jax-dev-ubu24.rocm720:latest"
+# IMAGE="ghcr.io/rocm/jax-dev-ubu24.therock-latest"
+IMAGE=$1
+CONTAINER_NAME="${USER}_jax_dev"
 USER_NAME=$(whoami)
 USER_ID=$(id -u)
 GROUP_ID=$(id -g)
@@ -21,15 +29,15 @@ docker run -dit --rm \
   --pid=host \
   -v /sys/kernel/debug:/sys/kernel/debug:rw \
   -v /sys/kernel/tracing:/sys/kernel/tracing:rw \
-  -v $HOME/Projects/triton-fusion:/home/andrnguy/Projects/triton-fusion \
-  -v $HOME/tensorflow_datasets:/home/andrnguy/tensorflow_datasets \
+  -v $HOME/jax:/workspace/jax \
+  -v $HOME/xla:/workspace/xla \
+  -v $HOME/Projects:/workspace/Projects \
   -v $HOME/.cache:/home/andrnguy/.cache \
   -v $HOME/.config:/home/andrnguy/.config \
   -v $HOME/.local:/home/andrnguy/.local \
-  -w /home/andrnguy/Projects/triton-fusion \
+  -w /workspace \
   "$IMAGE" \
   /bin/bash
-
 
 # Check if container is running
 if ! docker ps --format '{{.Names}}' | grep -q "^${CONTAINER_NAME}$"; then
@@ -42,11 +50,6 @@ docker exec "$CONTAINER_NAME" bash -c '
   DEBIAN_FRONTEND=noninteractive apt-get update -qq
   DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git patchelf ca-certificates
 '
-
-# Copy local .bashrc to container
-echo "Copying local .bashrc to container..."
-docker cp $HOME/.bashrc $CONTAINER_NAME:/root/.bashrc
-docker cp $HOME/.bashrc $CONTAINER_NAME:/home/andrnguy/.bashrc
 
 echo "Creating user '$USER_NAME' (UID: $USER_ID, GID: $GROUP_ID) in container '$CONTAINER_NAME'..."
 
@@ -71,6 +74,13 @@ docker exec -u root $CONTAINER_NAME bash -c "echo '$USER_NAME:x:$GROUP_ID:' >> /
 
 # Set proper permissions on GPU devices
 docker exec -u root $CONTAINER_NAME bash -c "chmod 666 /dev/kfd /dev/dri/* 2>/dev/null || true"
+
+# Copy local .bashrc to container
+echo "Copying local .bashrc and bash aliases to container..."
+docker cp $HOME/.bashrc $CONTAINER_NAME:/root/.bashrc
+docker cp $HOME/.bash_aliases $CONTAINER_NAME:/root/.bash_aliases
+docker cp $HOME/.bashrc $CONTAINER_NAME:/home/andrnguy/.bashrc
+docker cp $HOME/.bash_aliases $CONTAINER_NAME:/home/andrnguy/.bash_aliases
 
 echo "Make sure $USER_NAME is the owner of their home dir..."
 docker exec -u root $CONTAINER_NAME bash -c "chown -R $USER_ID:$GROUP_ID /home/$USER_NAME"
