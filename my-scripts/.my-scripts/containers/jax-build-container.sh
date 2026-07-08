@@ -6,8 +6,6 @@ if [ ! $# -eq 1 ]; then
     exit 1
 fi
 
-# IMAGE="ghcr.io/rocm/jax-dev-ubu24.rocm720:latest"
-# IMAGE="ghcr.io/rocm/jax-dev-ubu24.therock-latest"
 IMAGE=$1
 CONTAINER_NAME="${USER}_jax_dev"
 USER_NAME=$(whoami)
@@ -32,9 +30,6 @@ docker run -dit --rm \
   -v $HOME/jax:/workspace/jax \
   -v $HOME/xla:/workspace/xla \
   -v $HOME/Projects:/workspace/Projects \
-  -v $HOME/.cache:/home/andrnguy/.cache \
-  -v $HOME/.config:/home/andrnguy/.config \
-  -v $HOME/.local:/home/andrnguy/.local \
   -w /workspace \
   "$IMAGE" \
   /bin/bash
@@ -78,9 +73,9 @@ docker exec -u root $CONTAINER_NAME bash -c "chmod 666 /dev/kfd /dev/dri/* 2>/de
 # Copy local .bashrc to container
 echo "Copying local .bashrc and bash aliases to container..."
 docker cp $HOME/.bashrc $CONTAINER_NAME:/root/.bashrc
-docker cp $HOME/.bash_aliases $CONTAINER_NAME:/root/.bash_aliases
 docker cp $HOME/.bashrc $CONTAINER_NAME:/home/andrnguy/.bashrc
-docker cp $HOME/.bash_aliases $CONTAINER_NAME:/home/andrnguy/.bash_aliases
+docker cp $HOME/.dotfiles/my-scripts/.aliases $CONTAINER_NAME:/root/.bash_aliases
+docker cp $HOME/.dotfiles/my-scripts/.aliases $CONTAINER_NAME:/home/andrnguy/.bash_aliases
 
 echo "Make sure $USER_NAME is the owner of their home dir..."
 docker exec -u root $CONTAINER_NAME bash -c "chown -R $USER_ID:$GROUP_ID /home/$USER_NAME"
