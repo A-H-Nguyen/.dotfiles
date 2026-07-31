@@ -118,7 +118,7 @@ network-manager-applet \
 jq  \
 swww  \
 grim \
-slurp \
+satty \
 thunar \
 thunderbird \
 sddm \
