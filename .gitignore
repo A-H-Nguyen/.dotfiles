@@ -1,3 +1,9 @@
 # Don't keep track of changes in .tmux folder bc that is tpm's job
 tmux/.tmux/
 
+*.bak
+*.conf.bak
+*.auto.conf
+
+colors.*
+

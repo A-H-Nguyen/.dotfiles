@@ -1,0 +1,138 @@
+// -*- mode: jsonc -*-
+{
+    "margin-top": 3,
+    "margin-left": 6,
+    "margin-right": 6,
+    "spacing": 2, // Gaps between modules 
+
+    "modules-left": [
+        // "mpris"
+        "tray"
+    ],
+
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+
+    "modules-right": [
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "clock",
+        "custom/power"
+    ],
+
+    // Modules configuration
+    "mpris": {
+        "format": " <big>{player_icon}</big> : {artist} - {title}",
+        "artist-len": 12,
+        "title-len": 40,
+        // "player": "spotify", // I think that explicitly setting the default player to NOT be playerctl fixes the crashing problem
+        "player-icons": {
+            "default": "",
+            "firefox": "󰈹"
+            // "spotify": ""
+        },
+        "tooltip-format": "Current Player: {player}\n------------------------\nNow playing: {title}, by {artist}\n[{position}/{length}]",
+        "tooltip-format-paused": "Current Player: {player}\n------------------------\nNow playing: {title}, by {artist}\n[{position}/{length}] - [PAUSED]"
+        // "format-paused": " <big>{player_icon}</big> : {artist} - {title} <i>({status})</i>",
+        // "status-icons": {
+        //     "paused": "⏸"
+        // }
+    },
+
+    "hyprland/workspaces": {
+        "all-outputs": false,
+        "active-only": false,
+        "disable-scroll": true,
+        "warp-on-scroll": false,
+        "format": "<big>{name}</big>:<big>{icon}</big>",
+        "format-icons": {
+            // Trying to get these icons to stay centered in the button is a pain
+            // Don't bother -- I know which workspaces I like to put my programs
+            // "1": "",
+            // "2": "󰈹",
+            // "3": "󰇮",
+            // "6": "",
+            // "7": "",
+            // "8": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "backlight": {
+        "device": "nvidia_0",
+        "format": "<big>{percent}% {icon}</big>",
+        "format-icons": [""],
+        "tooltip": false
+    },
+
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "<big>{capacity}% {icon}</big>",
+        "format-charging": "<big>{capacity}% {icon}</big>",
+        "format-plugged": "<big></big>",
+        "format-icons": {
+            "default":  ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+            "charging": ["󰢟", "󰢜", "󰂆", "󰂇", "󰂈", "󰢝", "󰂉", "󰢞", "󰂊", "󰂋", "󰂅"]
+        },
+        "tooltip-format": "Current capacity: {capacity}%\nBattery Health: {health}%\nDischarging: {timeTo}",
+        "tooltip-format-charging": "Current capacity: {capacity}%\nBattery Health: {health}%\nCharging: {timeTo}",
+        "tooltip-format-plugged": "Current capacity: {capacity}%\nBattery Health: {health}%\nPlugged In"
+    },
+
+    "clock": {
+        "calendar": {
+            "format": {
+                "months":   "<b>{}</b>",
+                "weekdays": "<u><b>{}</b></u>",
+                "today":    "<span color='#ff6699'><b>{}</b></span>"
+            }
+        },
+        // "timezone": "America/New_York",
+        "format": "<big>{:%I:%M %p}</big>",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>"
+        // "format-alt": "<big>{:%Y/%m/%d}</big>"
+    },
+
+    "pulseaudio": {
+        "scroll-step": 5, // %, can be a float
+        "format": "<big>{volume}% {icon} |{format_source}</big>",
+        // "format-bluetooth": "{volume}% {icon} {format_source}",
+        // "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "{volume}% 󰖁 |{format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "{volume}% ",
+        "format-icons": {
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    // TODO: Make this less ugly
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10,
+        "icons": {
+            // "nm-applet": "applications-internet"
+        }
+    },
+
+    "custom/power": {
+        "format" : "<big>⏻</big>",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown now",
+			"reboot": "shutdown -r now",
+			"sleep": "systemctl hibernate"
+			// "suspend": "systemctl suspend-then-hibernate",
+			//"sleep": "systemctl hybrid-sleep"
+		}
+    }
+}
