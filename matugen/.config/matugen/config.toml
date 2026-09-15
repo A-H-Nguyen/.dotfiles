@@ -23,3 +23,8 @@ output_path = '~/.config/hypr/colors.lua'
 [templates.kitty]
 input_path = '~/.config/matugen/kitty-colors.conf'
 output_path = '~/.config/kitty/colors.conf'
+
+[templates.tmux]
+input_path = '~/.config/matugen/tmux-colors.conf'
+output_path = '~/.tmux/colors.conf'
+post_hook = 'tmux source-file ~/.tmux/colors.conf'
