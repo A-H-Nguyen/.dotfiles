@@ -10,9 +10,3 @@
 [submodule "fish/.config/fish"]
 	path = fish/.config/fish
 	url = git@github.com:A-H-Nguyen/fish-config.git
-[submodule "waybar/.config/waybar"]
-	path = waybar/.config/waybar
-	url = git@github.com:A-H-Nguyen/waybar.git
-[submodule "hypr/.config/hypr"]
-	path = hypr/.config/hypr
-	url = git@github.com:A-H-Nguyen/hypr.git
