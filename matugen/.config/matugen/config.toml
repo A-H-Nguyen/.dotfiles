@@ -1,0 +1,21 @@
+# config_directory/config.toml
+[config]
+
+[config.wallpaper]
+# Whether to set the wallpaper or not
+set = true
+
+# The base command to run for applying the wallpaper. Keywords like {{ image }}
+# or anything that works inside of hooks works here. You could also set a
+# static color if you use the color keywords and the wallpaper setter supports
+# it.
+command = "awww img {{ image }}"
+
+[templates.waybar]
+input_path = '~/.config/matugen/waybar.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = "pkill -SIGUSR2 waybar"
+
+[templates.hyprland]
+input_path = '~/.config/matugen/hypr.lua'
+output_path = '~/.config/hypr/colors.lua'
