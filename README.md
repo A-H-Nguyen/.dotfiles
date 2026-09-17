@@ -128,16 +128,25 @@ hyprland
 
 ### Notes for Hyprland:
  - `jq` is just a json pasrer, but I need it for my monitor scripts
- - `swww` is being renamed to `awww` see this [blog post](https://www.lgfae.com/posts/2025-10-29-RenamingSwww.html). Eventually, the extra/ package should change
- - I tried `wayclip` for integrating nvim yank into my clipboard. Didn't work. Hate it. Need to find something else bc it's annoying af right now.
  - The archinstall script also installs `uwsm`. I don't think it's necessary (maybe I'll eat my words some day, but I've been fine without it so far).
- - Is there an advantage to using the AUR versions of hyprland, hyprlock, etc.?
  - The developer of kitty is like, definitely a furry right? I would love to go back to Wezterm, but I had trouble getting it to work well on Hyprland
 
+### Matugen:
+
+We have Matugen support! 
+
+```
+sudo pacman -S matugen
+```
+
+However, it doesn't work perfectly for everything:
+ - The neovim theming clobbers my lualine configs
+ - On my end, had trouble making [Spicetify](https://spicetify.app/) look good.
+ - kitty, tmux, and [Vencord](https://vencord.dev/download/#linux)/[midnight](https://betterdiscord.app/themes/midnight) all work well
+
 ## Future Work/To Do
- - Make waybar stop crashing
+ - Make waybar stop crashing with MPRIS
  - Setup GTK and QT theming. I found a nice tutorial [here](https://github.com/P-ti-bob/hyprland/blob/main/docs/theming.md)
- - Add alternate colorschemes like in [this](https://www.youtube.com/watch?v=NrRVr-kysko)
  - Modify the Arch wiki's [automatic timezone script](https://wiki.archlinux.org/title/NetworkManager#Automatically_set_the_timezone) to use `connectivity-change` instead of `up`
  - Learn how to make eww widgets and connect them to my waybar
    - Better power menu
