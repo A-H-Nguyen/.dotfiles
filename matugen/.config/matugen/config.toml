@@ -28,3 +28,11 @@ output_path = '~/.config/kitty/colors.conf'
 input_path = '~/.config/matugen/tmux-colors.conf'
 output_path = '~/.tmux/colors.conf'
 post_hook = 'tmux source-file ~/.tmux/colors.conf'
+
+[templates.neovim]
+input_path = '~/.config/matugen/nvim-colors.lua'
+output_path = '~/.config/nvim/lua/plugins/colors.lua'
+# I can't get this hook to work -- we're just gonna have to 
+# manually reload nvim if the theme changes
+# post_hook = 'pkill -SIGUSR1 nvim'
+
